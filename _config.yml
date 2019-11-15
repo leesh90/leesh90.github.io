@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://domain.tld
+url:                   https://leesh90.github.io
 
 # IMPORTANT: Set The "base URL" of your site.
 #
@@ -22,19 +22,16 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title:                 SeungHun
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
-  Combines the best of static sites and modern web apps.
-  Open `_config.yml` to edit this text.
+ SeungHun's homepage
 
 # A shorter description for the sidebar.
 tagline:               >
-  A Jekyll theme with JavaScript powers.
-  Open `_config.yml` to edit this text.
+  I'm studying for a PhD at the Sangmyung University.
 
 # A list of keywords for your blog
 keywords:              []
@@ -45,10 +42,10 @@ logo:                  /assets/icons/icon.png
 # This should be the same author as first entry in `_data/authors.yml`.
 # Duplication is necessary due to the `jekyll-feed`, `jekyll-seo-tag` plugin.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                SeungHun Lee
+  email:               mr.leesh90@gmail.com
   # Used by `jekyll-seo-tag`:
-  # twitter:             <username>
+  twitter:             mr_leesh90
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2017. All rights reserved.
@@ -73,7 +70,9 @@ paginate_path:         /page-:num/
 # ========================================================================================
 
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:
+  background: '#0099ff'
+  overlay: false
 accent_color:          '#4fb1ba'
 
 # The string encoding which fonts to fetch from Google Fonts.
@@ -91,11 +90,11 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
+google_analytics:      UA-73260691-2
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <disqus_shortname>
+disqus:                <disqus_shortname>
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # tinyletter:            <tinyletter_username>
@@ -182,7 +181,7 @@ include:
 # ========================================================================================
 
 plugins:
-  # - jekyll-avatar
+  - jekyll-avatar
   # - jekyll-default-layout
   - jekyll-feed
   # - jekyll-gist
@@ -269,3 +268,13 @@ sass:
 # so that the location of the feed XML stays the same.
 # feed:
 #   path:                atom.xml
+
+
+
+
+defaults:
+  - scope:
+      path: about.md
+    values:
+      menu: true
+      order: 1
