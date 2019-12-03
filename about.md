@@ -9,6 +9,13 @@ menu: true
 order: 1
 ---
 
+
+
+
+
+
+
+<!-- 
 **Hydejack** is the complete package for professionals on the web.
 It features a blog suitable for both prose and technical documentation,
 a showcase for your projects, and a resume that is well-integrated with the design.
@@ -157,3 +164,4 @@ built-in support for [Tinyletter], and from element styles so you can build arbi
 [tinyletter]: https://tinyletter.com/
 
 *[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
+ -->
