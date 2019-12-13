@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Seunghun Lee
+title: About Me
 description: >
   PH.D Student at the Sangmyung University.<br>
   Networkd Data Science Lab.<br>
