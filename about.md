@@ -6,7 +6,7 @@ description: >
   Networkd Data Science Lab.<br>
   <a href="https://www.smu.ac.kr/grad/department/introduction42.do#tab6921">Dept. of Computer Science and Engineering</a><br>
   <a>Sangmyung University</a><br>
-  Office: C-building 404c
+  Office: C-building 404c<br>
   Email: mr.leesh90@gmail.com
 menu: true
 order: 1
