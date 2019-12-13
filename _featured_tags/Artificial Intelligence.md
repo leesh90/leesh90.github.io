@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: blog
 title: Artificial Intelligence
 slug: ai
 menu: true
