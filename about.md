@@ -1,18 +1,27 @@
 ---
 layout: about
-title: About
+title: Seunghun Lee
 description: >
-  **Hydejack** is a Jekyll theme with JavaScript powers, combining the best of static sites and modern web apps.
-  It features a suite of JavaScript that makes the page feel like an app, without sacrificing backwards-compatibility,
-  page-load speed or SEO.
+  PH.D Student at the Sangmyung University.<br>
+  Networkd Data Science Lab.<br>
+  <a href="https://www.smu.ac.kr/grad/department/introduction42.do#tab6921">Dept. of Computer Science and Engineering</a><br>
+  <a>Sangmyung University</a><br>
+  Office: C-building 404c
+  Email: mr.leesh90@gmail.com
 menu: true
 order: 1
 ---
 
 
+## Education
+ Seunghun Lee, Kanghee Lee, and Hyun-chul Kim<br>
+ ACM CSCW, New York City's Hudson River (Jersey City), Nov. 2018.(Poster)<br>
 
+ ![ddd]({{ site.baseurl }}/assets/papers/Content-based_Success_Prediction_of_Crowdfunding.pdf)
 
+## Research Interests
 
+## Publications
 
 
 <!-- 
