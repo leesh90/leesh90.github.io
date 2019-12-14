@@ -1,186 +1,129 @@
-# Config
-# ========================================================================================
+# -----------------------------------------------------------------------------
+#  User configuration
+# -----------------------------------------------------------------------------
 
-# IMPORTANT: Set the URL of your site.
-# Set to https://<username>.github.io when hosting on GitHub Pages
-# (unless you are using a custom domain).
-url:                   https://leesh90.github.io
+title:               Seunghun
 
-# IMPORTANT: Set The "base URL" of your site.
-#
-# When hosting your site in a subdirectory of a server, set to /<name of directory>
-# (with leading /, but without the < >)
-# Use the empty string '' otherwise.
-#
-# When using GitHub Pages, set to '' when hosting a user- or organization page,
-# i.e. when the name of the repository looks like <username>.github.io.
-# Otherwise, set to /<name of repository> (with leading /, but without the < >).
-baseurl:               ''
+# The unique resource location of your page.
+# Set to `https://<username>.github.io` when hosting on GitHub Pages
+url:                 https://leesh90.github.io
 
-# Language of your content in 2-letter code, e.g.: en, de.
-# You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+# Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
+# Set to '/<reponame>' when using the `gh-pages` branch of a repository
+baseurl:             ""
 
-# The title of your blog. Used in the sidebar and the browser tab.
-title:                 SeungHun
+# A very short description of your page
+tagline:             열심히 하자
 
-# A short description (~150 chars) of the page used for the meta description tag.
-# Can use markdown, but no more than one paragraph (enforced by `>`)
-description:           >
- SeungHun's homepage
+# A short description of the page, used in the sidebar and as fallback for the meta description tag.
+# Markdown enabled, but don't use more than one paragraph (enforced by `>`)
+description:         >
+  Seunghun's Homepage
 
-# A shorter description for the sidebar.
-tagline:               >
-  I'm studying for a PhD at the Sangmyung University.
-
-# A list of keywords for your blog
-keywords:              []
-
-# Used by jekyll-seo-tag...
-logo:                  /assets/icons/icon.png
-
-# This should be the same author as first entry in `_data/authors.yml`.
-# Duplication is necessary due to the `jekyll-feed`, `jekyll-seo-tag` plugin.
+# This should be the same author as first entry in `_data/authors.yml`
 author:
-  name:                SeungHun Lee
-  email:               mr.leesh90@gmail.com
-  # Used by `jekyll-seo-tag`:
-  twitter:             mr_leesh90
+  name:              SeungHun Lee
+  email:             mr.leesh90@gmail.com
 
-# This text will appear in a `<small>` tag in the footer of every page.
-copyright:             '&copy 2019. by Seunghun Lee'
-
-# Add links to the footer.
-# Typically you'll want to link to your impress, cookies or privacy policy, etc.
-# legal:
-#   - title:             Impress
-#     href:              /impress/
-#   - title:             Cookies Policy
-#     href:              /cookies-policy/
-
-# Format of the permalinks
-permalink:             pretty
-
-# Pagination configuration (used by the `blog` layout)
-paginate:              5
-paginate_path:         /page-:num/
-
-
-# Customizaton
-# ========================================================================================
-
-# Sidebar image and theme color of the site.
-accent_image:
-  background: '#0099ff'
-  overlay: false
-accent_color:          '#4fb1ba'
-
-# The string encoding which fonts to fetch from Google Fonts.
-# See: <https://qwtel.com/hydejack/docs/configuration/>
-google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
-
-# The text font. Expects a string that is a valid CSS font-family value.
-font:                  Noto Sans, Helvetica, Arial, sans-serif
+# Fallback image and color
+image:               /assets/img/cloud.jpg
+color:               '#4f86aa'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
-font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
+font_heading:        "'Lato', 'Sans-serif'"
 
-# 3rd Party Integrations
-# ----------------------------------------------------------------------------------------
+# The text font. Expects a string that is a valid CSS font-family value.
+font:                "'Lato', 'Sans-serif'"
+
+# The string encoding what fonts to fetch from Google Fonts.
+# See: https://qwtel.com/hydejack/docs/configuration/
+google_fonts:        Lato
+
+# If you do not use a Google Fonts, uncomment the line below
+# no_google_fonts:     true
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Anaylics from your page, remove the line below.
-google_analytics:      UA-73260691-2
+google_analytics:    UA-73260691-2
 
-# Setting a disqus shortname will enable the comment section on
-# pages with `comments: true` in the front matter.
-disqus:                <disqus_shortname>
+# Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
+disqus_shortname:    leesh90
 
-# Setting a tinyletter username will enable the newsletter subscription box.
-# tinyletter:            <tinyletter_username>
+# This text will appear in the footer of every page. Markdown enabled.
+copyright:           '&copy; 2019. by leesh90'
 
-# Hydejack Settings
-# ----------------------------------------------------------------------------------------
-# These settings are specific to Hydejack.
+# Format of the permalinks
+permalink:           pretty
 
+# Pagination configuration (used by the `blog` layout)
+paginate:            5
+paginate_path:       '/page-:num/'
 
-# Collections
-# ========================================================================================
+# If you are upgrading form a v5 verison of Hydejack, uncomment the two lines below,
+# so that the location of the feed XML stays the same.
+# feed:
+#   path:              atom.xml
+
+# Set to true when building with the `--lsi` option
+# See: https://jekyllrb.com/docs/variables/#site-variables
+# use_lsi:             true
+
+# Set to `true` if you don't want to show an icon after each link that opens to an external site
+# no_mark_external:    true
+
+# Uncomment this line if third party plugins fail to work with dynimically loaded pages
+# disable_push_state:  true
+
+# Uncomment this line if want to disable the touch drawer on mobile
+# disable_drawer: true
+
+# -----------------------------------------------------------------------------
+#  Collections
+# -----------------------------------------------------------------------------
 
 collections:
   featured_categories:
-    permalink:         /category/:name/
-    output:            true
-
+    permalink:       /category/:name/
+    output:          true
   featured_tags:
-    permalink:         /tag/:name/
-    output:            true
-
+    permalink:       /tag/:name/
+    output:          true
   projects:
-    permalink:         /projects/:path/
-    output:            true
+    permalink:       /projects/:path/
+    output:          true
 
+# -----------------------------------------------------------------------------
+#  Advanced configuration
+# -----------------------------------------------------------------------------
 
-# File inclusion/exclusion
-# ========================================================================================
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-redirect-from
 
 exclude:
-  - vendor
-  - Gemfile
-  - Gemfile.lock
+  - README.md
+  - LICENSE.md
   - node_modules
   - package.json
   - package-lock.json
-include:
-  - LICENSE.md
-
-
-# Plugins and Plugin Configuration
-# ========================================================================================
-
-plugins:
-  - jekyll-avatar
-  # - jekyll-default-layout
-  - jekyll-feed
-  # - jekyll-gist
-  # - jekyll-optional-front-matter
-  - jekyll-paginate
-  # - jekyll-readme-index
-  # - jekyll-redirect-from
-  - jekyll-relative-links
-  # - jekyll-remote-theme
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  # - jekyll-titles-from-headings
-
-
-
-optional_front_matter:
-  remove_originals:    true
-
-readme_index:
-  remove_originals:    true
-
-relative_links:
-  collections:         true
-
-titles_from_headings:
-  strip_title:         true
-  collections:         true
+  - Gemfile
+  - Gemfile.lock
 
 kramdown:
-  footnote_backlink:   '&#x21a9;&#xfe0e;'
-  math_engine:         mathjax
+  footnote_backlink: '&#x21a9;&#xfe0e;'
+  math_engine:       mathjax
   math_engine_opts:
-    preview:           true
-    preview_as_code:   true
+    preview:         true
+    preview_as_code: true
 
 compress_html:
-  comments:            ["<!-- ", " -->"]
-  clippings:           all
-  endings:             all
+  comments:          ["<!-- ", " -->"]
+  clippings:         all
+  endings:           all
   ignore:
-    envs:              [development]
+    envs:            [development]
 
 sass:
-  style:               compressed
+  style:             compressed
