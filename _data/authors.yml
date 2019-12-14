@@ -7,8 +7,13 @@ isme2n:
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
-  about:             |
-    ...
+  about:             
+  PH.D Student at the Sangmyung University
+  Networkd Data Science Lab
+  Dept. of Computer Science and Engineering
+  Sangmyung University
+  "Office: C-building 404c"
+  "Email: mr.leesh90@gmail.com"
 
   # This photo will be used in the about section
   picture:
