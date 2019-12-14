@@ -6,17 +6,17 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Dec 2019 18:45:45 +0900</pubDate>
-    <lastBuildDate>Sat, 14 Dec 2019 18:45:45 +0900</lastBuildDate>
-    <generator>Jekyll v3.4.3</generator>
+    <pubDate>Sat, 14 Dec 2019 19:27:00 +0900</pubDate>
+    <lastBuildDate>Sat, 14 Dec 2019 19:27:00 +0900</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
     
       <item>
         <title>test</title>
         <description>&lt;h2 id=&quot;첫-글&quot;&gt;첫 글&lt;/h2&gt;
 </description>
-        <pubDate>Mon, 29 Feb 2016 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/ai/2016/02/29/test/</link>
-        <guid isPermaLink="true">http://localhost:4000/ai/2016/02/29/test/</guid>
+        <pubDate>Sat, 14 Dec 2019 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/ai/2019/12/14/test/</link>
+        <guid isPermaLink="true">http://localhost:4000/ai/2019/12/14/test/</guid>
         
         <category>dl</category>
         

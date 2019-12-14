@@ -4,13 +4,15 @@ title: About Me
 menu: true
 order: 1
 description: >
-  PH.D Student at the Sangmyung University.<br>
-  Networkd Data Science Lab.<br>
-  <a href="https://www.smu.ac.kr/grad/department/introduction42.do#tab6921">Dept. of Computer Science and Engineering</a><br>
-  <a>Sangmyung University</a><br>
-  Office: C-building 404c<br>
-  Email: mr.leesh90@gmail.com
 ---
+
+**Seunghun Lee(이승훈)**<br>
+**Networkd Data Science Lab**<br>
+**Dept. of Computer Science and Engineering**<br>
+**Sangmyung University**<br>
+**Office: C-building 404c**<br>
+**Email: mr.leesh90@gmail.com**
+
 
 ## Research Interests
 
