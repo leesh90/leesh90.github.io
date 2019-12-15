@@ -13,11 +13,12 @@ url:                 https://leesh90.github.io
 baseurl:             ""
 
 # A very short description of your page
-tagline:             PH.D Student at the Sangmyung University - 이승훈
+tagline:             
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
+PH.D Student at the Sangmyung University - 이승훈
 # Seunghun's Homepage
 
 # This should be the same author as first entry in `_data/authors.yml`
