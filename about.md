@@ -26,30 +26,34 @@ description: >
 ## Publications
 ### Conferences
 
- 1. [Content-based Success Prediction of Crowdfunding Campaigns: A Deep Learning Approach][1]<br>
+ - [Traffic Classification using Deep Learning: High Accuracy is Not Enough][1]<br>
+ Kanghee Lee, Seunghun Lee, and Hyun-chul Kim<br>
+ ACM SIGCOMM, New York City, Aug. 2020.(Poster)
+	
+ - [Content-based Success Prediction of Crowdfunding Campaigns: A Deep Learning Approach][1]<br>
  Seunghun Lee, Kanghee Lee, and Hyun-chul Kim<br>
  ACM CSCW, New York City's Hudson River (Jersey City), Nov. 2018.(Poster)
 
- 2. [The Language of Deceivers: Linguistic Features of Crowdfunding Scams][2]<br>
+ - [The Language of Deceivers: Linguistic Features of Crowdfunding Scams][2]<br>
  Wafa Shafqat, Seunghun Lee, Sehrish Malik, and Hyun-chul Kim<br>
  International World Wide Web conference (WWW), Montreal, Canada, Apr. 2016.(Poster)
 
- 3. [SNS Map : Location-based SNS data mapping system][3]<br>
+ - [SNS Map : Location-based SNS data mapping system][3]<br>
  Seunghun Lee, Daeyoung Oh, Minhyuk Kang, and Hyun-chul kim<br>
  한국컴퓨터종합학술대회(In Proceedings of the Korea Computer Congress(KCC)), Jeju, Korea, June. 2015.
 
 
 ### Journal
 
- 1. [Crowdfunding Scams : The Profiles and Language of Deceivers][4]<br>
+ - [Crowdfunding Scams : The Profiles and Language of Deceivers][4]<br>
  Seung-hun Lee, and Hyun-chul Kim<br>
  Journal of The Korea Society of Computer and Information, Volume 23, Number 3, pp. 55-62, Mar. 2018.
 
- 2. [Predicting Success of Crowdfunding Campaigns using Multimedia and Linguistic Features][5]<br>
+ - [Predicting Success of Crowdfunding Campaigns using Multimedia and Linguistic Features][5]<br>
  Kang-hee Lee, Seung-hun Lee, and Hyun-chul Kim<br>
  Journal of Korea Multimedia Society, Volume 21, Number 2, pp. 281-288, Feb. 2018.
 
- 3. [Smart SNS Map: Location-based Social Network Service Data Mapping and Visualization System][6]<br>
+ - [Smart SNS Map: Location-based Social Network Service Data Mapping and Visualization System][6]<br>
  Jangho Yoon, Seung-hun Lee, and Hyun-chul Kim<br>
  Journal of Korea Multimedia Society, Volume 19, Number 2, pp. 428-435, Feb. 2016.<br><br>
 
