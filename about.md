@@ -6,12 +6,11 @@ order: 1
 ---
 
 **Seunghun Lee(이승훈)**<br>
-**Networkd Data Science Lab**<br>
+**[Network Data Science Lab](http://cosmos.smuc.ac.kr)**<br>
 **Dept. of Computer Science and Engineering**<br>
 **Sangmyung University**<br>
 **Office: C-building 404c**<br>
 **Email: mr.leesh90@gmail.com**<br>
-**Lab homepage: [Network Data Science](http://cosmos.smuc.ac.kr)**<br>
 
 
 ## Research Interests
