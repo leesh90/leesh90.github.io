@@ -5,7 +5,7 @@ menu: true
 order: 1
 ---
 
-**Seunghun Lee(이승훈)**<br>
+**SeungHun Lee(이승훈)**<br>
 **[Network Data Science Lab](http://cosmos.smuc.ac.kr)**<br>
 **Dept. of Computer Science and Engineering**<br>
 **Sangmyung University**<br>
