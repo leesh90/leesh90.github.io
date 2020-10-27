@@ -10,7 +10,8 @@ order: 1
 **Dept. of Computer Science and Engineering**<br>
 **Sangmyung University**<br>
 **Office: C-building 404c**<br>
-**Email: mr.leesh90@gmail.com**
+**Email: mr.leesh90@gmail.com**<br>
+**Lab homepage: [Network Data Science](http://cosmos.smuc.ac.kr)**<br>
 
 
 ## Research Interests
