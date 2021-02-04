@@ -2,8 +2,8 @@
 layout: post
 title:  "Docker Command"
 subtitle: "Docker Command"
-categories: etc
-tags: paper
+categories: Environment
+tags: docker
 comments: true
 ---
 
@@ -12,3 +12,4 @@ comments: true
 ```
 docker pull [image name]
 ```
+
