@@ -2,7 +2,7 @@
 layout: post
 title:  "Docker Command"
 subtitle: "Docker Command"
-categories: Environment
+categories: environment
 tags: docker
 comments: true
 ---
