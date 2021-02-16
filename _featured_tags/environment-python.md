@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Docker
-slug: docker
-category: python
+title: Python
+slug: python
+category: environment
 menu: false
 order: 3
 ---

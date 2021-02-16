@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Docker
-slug: docker
-category: ubuntu
+title: Ubuntu
+slug: ubuntu
+category: environment
 menu: false
 order: 2
 ---
