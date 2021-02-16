@@ -30,7 +30,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="naver-site-verification" content="22c5b4ef3bfda7fc6100671413989219de7a4ac8"/>
-<meta property="og:title" content="Paper">
+<meta property="og:title" content="Using both Python 2.x & 3.x">
 <meta property="og:type" content="article">
 
 
@@ -45,13 +45,15 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 
 
 
-  <title>Paper &middot; SeungHun</title>
+  <title>Using both Python 2.x & 3.x &middot; SeungHun</title>
 
 
 
-<meta name="description" content="
+<meta name="description" content="python2.x 설정
+
 ">
-<meta property="og:description" content="
+<meta property="og:description" content="python2.x 설정
+
 ">
 
 
@@ -65,15 +67,17 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/tag/etc-paper/">
-<meta property="og:url" content="http://localhost:4000/tag/etc-paper/">
+<link rel="canonical" href="http://localhost:4000/environment/2021/02/16/python2_3/">
+<meta property="og:url" content="http://localhost:4000/environment/2021/02/16/python2_3/">
 
 <link rel="alternate" type="application/atom+xml" title="SeungHun Feed" href="http://localhost:4000/feed.xml">
 
 
-  <link rel="prev" href="http://localhost:4000/tag/etc-book/">
+  <link rel="prev" href="http://localhost:4000/environment/2021/02/04/docker-command/">
 
 
+
+  <link rel="next" href="http://localhost:4000/environment/2021/02/16/virtualenv-add-jupyter/">
 
 
 <link rel="apple-touch-icon" href="http://localhost:4000/apple-touch-icon.png">
@@ -168,19 +172,16 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/sidebarbackground.jpg">
       
 
-
-  
-
-<article id="post-etc/2020/10/27/dd" class="post mb6" role="article">
+<article id="post-environment/2021/02/16/python2_3" class="post" role="article">
   <header>
     <h1 class="post-title">
-      <a href="/etc/2020/10/27/dd/" data-flip="title">
-        1st
-      </a>
+      
+        Using both Python 2.x & 3.x
+      
     </h1>
 
     <p class="post-date heading">
-      <time datetime="2020-10-27T00:00:00+09:00">27 Oct 2020</time>
+      <time datetime="2021-02-16T00:00:00+09:00">16 Feb 2021</time>
       
 
 
@@ -191,7 +192,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 
 
 
-in <a href="/category/etc/" data-flip="title">ETC</a>
+in <a href="/category/environment/" data-flip="title">Environment</a>
 
       
 
@@ -203,7 +204,7 @@ in <a href="/category/etc/" data-flip="title">ETC</a>
 
 
 
-on <a href="/tag/etc-paper/" data-flip="title">Paper</a>
+on <a href="/tag/environment-python/" data-flip="title">Python</a>
 
     </p>
 
@@ -216,32 +217,154 @@ on <a href="/tag/etc-paper/" data-flip="title">Paper</a>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
-    <p>test</p>
+    <div class="markdown-body">
 
-    <p class="read-more"><a class="heading" href="/etc/2020/10/27/dd/" data-flip="title">Read more...</a></p>
+
+
+
+
+<br/>
+      <h3 id="python2x-설정">python2.x 설정</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>virtualenv <span class="nt">-p</span> python2.7 ~/Desktop/py27
+<span class="nb">source</span> ~/Desktop/py27/bin/active
+pip <span class="nb">install </span>notebook ipykernel
+ipython kernel <span class="nb">install</span> <span class="nt">--user</span>
+</code></pre></div></div>
+
+<h3 id="python3x-설정">python3.x 설정</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>virtualenv <span class="nt">-p</span> python3 ~/Desktop/py3
+<span class="nb">source</span> ~/Desktop/py3/bin/active
+pip3 <span class="nb">install </span>notebook ipykernel
+ipython kernel <span class="nb">install</span> <span class="nt">--user</span>
+</code></pre></div></div>
+
+
+    </div>
   
 
 </article>
 
 
+  <div class="share">
+      <h2>Share this post</h2>
+      <div class="share-body">
+        <a href="http://twitter.com/share?text=Using both Python 2.x & 3.x&amp;url=http://localhost:4000/environment/2021/02/16/python2_3/"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="icon-twitter">
+            </span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/environment/2021/02/16/python2_3/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="icon-facebook">
+            </span>
+        </a>
+    </div>
+  </div>
+  <br/>
 
-<h2 class="sr-only">Pagination</h2>
-<nav class="pagination heading" role="navigation">
-  <ul>
-    <li class="pagination-item older" >
+
+
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
+  <h2 class="page-title hr">
+    About
+  </h2>
+<div class="author-body">
+  
+    
+  
+
+  
+
+  <img
+    src="/assets/img/me_cscw.png"
+    class="me"
+    alt="SeungHun Lee"
+    srcset="/assets/img/me_cscw.png 1x,/assets/img/me_cscw.png 2x"
+    
+  />
+
+
+  
+  <div class="author-body-description">
+    <p>PH.D Student at the Sangmyung University</p>
+
+  </div>
+</div>
+</div>
+
+  </aside>
+
+
+
+
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
       
-        <span>Older</span>
       
-    </li>
-    <li class="pagination-item newer" >
       
-        <span>Newer</span>
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/environment/2021/02/16/virtualenv-add-jupyter/" data-flip="title">
+    <span>Jupyter Notebook에 가상환경 커널 추가하기</span>
+  </a>
+  <small><time datetime="2021-02-16T00:00:00+09:00">
+    16 Feb 2021
+  </time></small>
+</li>
+
+        
       
-    </li>
+        
+          
+          
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/environment/2021/02/04/docker-command/" data-flip="title">
+    <span>Docker Command</span>
+  </a>
+  <small><time datetime="2021-02-04T00:00:00+09:00">
+    04 Feb 2021
+  </time></small>
+</li>
+
+        
+      
+    
   </ul>
-</nav>
+</aside>
 
 
+
+      
+        <aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr/>
+
+  <div id="disqus_thread"></div>
+
+  <script>
+    !function(s,i){function e(e){var t=s.pageYOffset||i.body.scrollTop;s.DISQUS&&!s._disqusThis&&!s._disqusFirst&&t+s.innerHeight>=s._disqusThreadOffsetTop&&(s._disqusThis=!0,s.DISQUS.reset({reload:!0,config:d}))}var d=function(){this.page.title="Using both Python 2.x & 3.x",this.page.identifier="/environment/2021/02/16/python2_3",this.page.url="http://localhost:4000/environment/2021/02/16/python2_3/"};s._disqusFirst=void 0===s._disqusFirst||s._disqusFirst,s._disqusLoading=void 0!==s._disqusLoading&&s._disqusLoading,s._disqusThis=!1,s._disqusThreadOffsetTop=i.getElementById("disqus_thread").offsetTop,s._disqusLoading?s._disqusFirst=!1:(s._disqusLoading=!0,loadJSDeferred("//leesh90.disqus.com/embed.js"),s.addEventListener?s.addEventListener("scroll",e,{passive:!0}):s.attachEvent?s.attachEvent("onscroll",e):s.onscroll=e)}(window,document);
+
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
 
       
 
@@ -377,7 +500,7 @@ on <a href="/tag/etc-paper/" data-flip="title">Paper</a>
          
            
              <li>
-               <a class="sidebar-nav-subitem active" href="/tag/etc-paper/">Paper</a>
+               <a class="sidebar-nav-subitem" href="/tag/etc-paper/">Paper</a>
              </li>
            
          

@@ -6,9 +6,90 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Oct 2020 21:41:25 +0900</pubDate>
-    <lastBuildDate>Tue, 27 Oct 2020 21:41:25 +0900</lastBuildDate>
+    <pubDate>Tue, 16 Feb 2021 18:19:51 +0900</pubDate>
+    <lastBuildDate>Tue, 16 Feb 2021 18:19:51 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Jupyter Notebook에 가상환경 커널 추가하기</title>
+        <description>&lt;p&gt;먼저 virtualenv를 사용해서 가상환경을 만들고 활성화 시켜줍니다.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;virtualenv &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; python2.7 ~/Desktop/py27
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/Desktop/py27/bin/active
+pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;notebook ipykernel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그 다음으로 notebook과 ipykernel을 설치합니다.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;notebook ipykernel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Jupyter Notebook에 새로 만든 가상환경을 추가합니다.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; ipykernel &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--user&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;가상환경 이름] &lt;span class=&quot;nt&quot;&gt;--display-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;[Jupyter notebook에 등록되는 이름]&quot;&lt;/span&gt;
+python &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; ipykernel &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--user&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; py27 &lt;span class=&quot;nt&quot;&gt;--display-name&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;py27_test&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;완료가 되었으면 Jupyter Notebook을 실행시켜서 살펴보면 다음과 같이 확인 할 수 있습니다.
+&lt;img src=&quot;/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png&quot; width=&quot;270&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Feb 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/environment/2021/02/16/virtualenv-add-jupyter/</link>
+        <guid isPermaLink="true">http://localhost:4000/environment/2021/02/16/virtualenv-add-jupyter/</guid>
+        
+        <category>python</category>
+        
+        
+        <category>environment</category>
+        
+      </item>
+    
+      <item>
+        <title>Using both Python 2.x &amp; 3.x</title>
+        <description>&lt;h3 id=&quot;python2x-설정&quot;&gt;python2.x 설정&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;virtualenv &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; python2.7 ~/Desktop/py27
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/Desktop/py27/bin/active
+pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;notebook ipykernel
+ipython kernel &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--user&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;python3x-설정&quot;&gt;python3.x 설정&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;virtualenv &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; python3 ~/Desktop/py3
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/Desktop/py3/bin/active
+pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;notebook ipykernel
+ipython kernel &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--user&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 16 Feb 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/environment/2021/02/16/python2_3/</link>
+        <guid isPermaLink="true">http://localhost:4000/environment/2021/02/16/python2_3/</guid>
+        
+        <category>python</category>
+        
+        
+        <category>environment</category>
+        
+      </item>
+    
+      <item>
+        <title>Docker Command</title>
+        <description>&lt;h2 id=&quot;docker-이미지-가져오기&quot;&gt;Docker 이미지 가져오기&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull [image name]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 04 Feb 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/environment/2021/02/04/docker-command/</link>
+        <guid isPermaLink="true">http://localhost:4000/environment/2021/02/04/docker-command/</guid>
+        
+        <category>docker</category>
+        
+        
+        <category>environment</category>
+        
+      </item>
     
       <item>
         <title>1st</title>
