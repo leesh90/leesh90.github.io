@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: Ubuntu / Linux
+title: Ubuntu
 slug: ubuntu
 category: environment
 menu: false
