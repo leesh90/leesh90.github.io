@@ -13,9 +13,4 @@ var tipuesearch = {"pages": [{
     "text": "Docker 이미지 가져오기 docker pull [image name]",
     "tags": "docker environment",
     "url": "/environment/2021/02/04/docker-command/"
-  },{
-    "title": "1st",
-    "text": "test",
-    "tags": "paper etc",
-    "url": "/etc/2020/10/27/dd/"
   }]};

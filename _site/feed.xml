@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Feb 2021 18:19:51 +0900</pubDate>
-    <lastBuildDate>Tue, 16 Feb 2021 18:19:51 +0900</lastBuildDate>
+    <pubDate>Fri, 05 Mar 2021 00:59:33 +0900</pubDate>
+    <lastBuildDate>Fri, 05 Mar 2021 00:59:33 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -88,21 +88,6 @@ ipython kernel &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span cl
         
         
         <category>environment</category>
-        
-      </item>
-    
-      <item>
-        <title>1st</title>
-        <description>&lt;p&gt;test&lt;/p&gt;
-</description>
-        <pubDate>Tue, 27 Oct 2020 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/etc/2020/10/27/dd/</link>
-        <guid isPermaLink="true">http://localhost:4000/etc/2020/10/27/dd/</guid>
-        
-        <category>paper</category>
-        
-        
-        <category>etc</category>
         
       </item>
     
