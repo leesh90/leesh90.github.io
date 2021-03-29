@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-## Docker 이미지 가져오기
+##### Docker 이미지 가져오기
 ```
 docker pull [image name]
 ```

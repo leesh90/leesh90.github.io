@@ -3,13 +3,12 @@ layout: post
 title:  "selenium을 사용한 데이터 크롤링하기"
 subtitle: ""
 categories: development
-tags: crawler
+tags: crawling
 comments: true
 ---
 
 
-## 사전 설치
-
+#### 사전 설치
 
 ##### 1. Selenium & BeautifulSoup설치하기
 ```bash
