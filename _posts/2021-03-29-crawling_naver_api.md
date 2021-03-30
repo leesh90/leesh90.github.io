@@ -29,9 +29,17 @@ comments: true
 
 <br/><br/>
 
-
 #### 2. 검색 API Documents
 
-네이버 개발자 메인 페이지 상단에서 [Documents] - [서비스 API] - [검색]을 선택하면 검색 API에 대한 Documents로 ddd
+네이버 개발자 메인 페이지 상단에서 [Documents] - [서비스 API] - [검색]을 선택하면 검색 API에 대한 Documents를 아래와 같이 확인할 수 있다.
+<img src='{{"/assets/img/post_image/crwaling_naver_api/search_api_documents.png"}}' >  
+
+페이지를 내려서 확인해보면 Python 코드도 확인할 수 있다. 나는 Python을 사용해서 크롤링을 하므로 이 코드를 가지고 수정해서 사용하면 된다.
+<img src='{{"/assets/img/post_image/crwaling_naver_api/search_api_python_example.png"}}' >
+
+
+#### 3. 
+
+
 <!-- 
 <img src='{{"/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png"}}' width="270" height="300"> -->
