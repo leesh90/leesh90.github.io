@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Ubuntu
-slug: ubuntu
+title: ETC
+slug: etc
 category: environment
 menu: false
-order: 2
+order: 3
 ---

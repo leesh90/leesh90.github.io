@@ -6,9 +6,86 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Mar 2021 14:46:33 +0900</pubDate>
-    <lastBuildDate>Tue, 30 Mar 2021 14:46:33 +0900</lastBuildDate>
+    <pubDate>Tue, 30 Mar 2021 18:01:08 +0900</pubDate>
+    <lastBuildDate>Tue, 30 Mar 2021 18:01:08 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>iTerm2 + Zsh + Oh My Zsh 설치 &amp; 설정하기</title>
+        <description>&lt;p&gt;맥을 설치하면 기본으로 Terminal이 설치되어있지만 사용하기에 불편하고 멋있어(?) 보이지 않아서 다른 터미널을 설치해서 사용하려고 한다.
+맥에서 가장 많이 추천되고 오랫동안 내가 사용해온 iTerm2 + zsh 를 설치하고 설정하는 방법을 알아보자.
+iTerm2를 사용하면서 가장 유용했던 기능은 화면 분할 기능이다. 데이터 크롤링을 하는데 10대 이상의 컴퓨터를 동시에 접속해서 관리 하는데 기본 터미널로만은 너무 힘들어서 화면 분할도 되고 다른 많은 기능도 있는 iTerm2를 찾게 됐다. 설치를 하고 설정을 해보자.&lt;/p&gt;
+
+&lt;h3 id=&quot;iterm2--zsh--oh-my-zsh-설치&quot;&gt;iTerm2 + Zsh + Oh My Zsh 설치&lt;/h3&gt;
+
+&lt;h5 id=&quot;1-iterm2-설치&quot;&gt;1. iTerm2 설치&lt;/h5&gt;
+&lt;p&gt;아래 링크에 들어가서 다운받고 알집을 풀어서 설치하면 된다.
+iTerm2 홈페이지: &lt;a href=&quot;https://iterm2.com/&quot;&gt;https://iterm2.com/&lt;/a&gt;&lt;br /&gt;
+iTerm2 기본 설치 화면이다.
+&lt;img src=&quot;/assets/img/post_image/iterm_install/iterm.png&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;2-zsh-설치&quot;&gt;2. Zsh 설치&lt;/h5&gt;
+&lt;p&gt;그런데 터미널의 제목표시줄을 보면 zsh가 기본 쉘로 이미 설정된 것을 볼 수 있다.
+확인해보니, MacOS 10.15버전인 카탈리나부터 기본 쉘이 bash에서 zsh로 변경되어서 OS를 설치하면서 기본으로 설치되어 있다.&lt;/p&gt;
+
+&lt;p&gt;현재 내 컴퓨터에 어떤 쉘들이 설치되어 있는지 확인하려면 다음과 같은 명령으로 확인할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/shells
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Zsh를 설치하기 위해서는 MacOS 패키지 관리 프로그램인 Homebrew를 사용해서 설치하면 된다.
+Homebrew를 설치하는 방법은 &lt;a href=&quot;https://leesh90.github.io/environment/2021/03/30/homebrew_install/&quot;&gt;Homebrew 설치 &amp;amp; 사용하기&lt;/a&gt;를 참고하면 된다.&lt;/p&gt;
+
+&lt;p&gt;다음과 같은 쉘들이 기본으로 설치된 것을 확인할 수 있다.
+&lt;img src=&quot;/assets/img/post_image/iterm_install/installed_shell_list.png&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;만약, 기본 쉘을 zsh에서 bash로 변경하고 싶으면 다음 명령어를 사용하면 된다.&lt;/p&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chsh &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /bin/bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음으로는 쉘을 사용하는데 도움을 많이 주는 Oh My Zsh을 설치한다.
+Oh My Zsh은 타이핑 교정, 명령어 추천, 자동 완성 기능등 여러가지 기능이 있다.
+설치는 아래 사이트에서 설치 명령어를 찾아서 하면 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ohmyz.sh/#install&quot;&gt;https://ohmyz.sh/#install&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/ohmyzsh/ohmyzsh&quot;&gt;https://github.com/ohmyzsh/ohmyzsh&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- 
+&lt;img src='/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png' width=&quot;270&quot; height=&quot;300&quot;&gt; --&gt;
+</description>
+        <pubDate>Tue, 30 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/environment/2021/03/30/iterm_install/</link>
+        <guid isPermaLink="true">http://localhost:4000/environment/2021/03/30/iterm_install/</guid>
+        
+        <category>etc</category>
+        
+        
+        <category>environment</category>
+        
+      </item>
+    
+      <item>
+        <title>Homebrew 설치 &amp; 사용하기</title>
+        <description>&lt;p&gt;MacOS를 설치하고 가장 먼저 해야될 일중에 하나가 MacOS 패키지 관리 프로그램인 Homebrew를 설정하는 것이다.
+리눅스에서는 yum, apt와 같은 역할을 한다고 볼수있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- 
+&lt;img src='/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png' width=&quot;270&quot; height=&quot;300&quot;&gt; --&gt;
+</description>
+        <pubDate>Tue, 30 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/environment/2021/03/30/homebrew_install/</link>
+        <guid isPermaLink="true">http://localhost:4000/environment/2021/03/30/homebrew_install/</guid>
+        
+        <category>etc</category>
+        
+        
+        <category>environment</category>
+        
+      </item>
     
       <item>
         <title>NAVER API를 사용해서 크롤링하기</title>

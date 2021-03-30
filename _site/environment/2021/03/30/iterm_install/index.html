@@ -30,7 +30,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="naver-site-verification" content="22c5b4ef3bfda7fc6100671413989219de7a4ac8"/>
-<meta property="og:title" content="Book">
+<meta property="og:title" content="iTerm2 + Zsh + Oh My Zsh 설치 & 설정하기">
 <meta property="og:type" content="article">
 
 
@@ -45,14 +45,12 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 
 
 
-  <title>Book &middot; SeungHun</title>
+  <title>iTerm2 + Zsh + Oh My Zsh 설치 & 설정하기 &middot; SeungHun</title>
 
 
 
-<meta name="description" content="
-">
-<meta property="og:description" content="
-">
+<meta name="description" content="맥을 설치하면 기본으로 Terminal이 설치되어있지만 사용하기에 불편하고 멋있어(?) 보이지 않아서 다른 터미널을 설치해서 사용하려고 한다. 맥에서 가장 많이 추천되고 오랫동안 내가 사용해온 iTerm2 + zsh 를 설치하고 설정하는 방법을 알아보자. iTerm2를 사용하면서 가장 유용했던 기능은 화면 분할 기능이다. 데이터 크롤링을 하는데 10대 이상의 컴퓨터를 동시에 접속해서 관리 하는데 기본 터미널로만은...">
+<meta property="og:description" content="맥을 설치하면 기본으로 Terminal이 설치되어있지만 사용하기에 불편하고 멋있어(?) 보이지 않아서 다른 터미널을 설치해서 사용하려고 한다. 맥에서 가장 많이 추천되고 오랫동안 내가 사용해온 iTerm2 + zsh 를 설치하고 설정하는 방법을 알아보자. iTerm2를 사용하면서 가장 유용했던 기능은 화면 분할 기능이다. 데이터 크롤링을 하는데 10대 이상의 컴퓨터를 동시에 접속해서 관리 하는데 기본 터미널로만은...">
 
 
 <!-- tipuesearch -->
@@ -65,17 +63,15 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
 <!-- =============== -->
 <!-- LINKS           -->
 <!-- =============== -->
-<link rel="canonical" href="http://localhost:4000/tag/etc-book/">
-<meta property="og:url" content="http://localhost:4000/tag/etc-book/">
+<link rel="canonical" href="http://localhost:4000/environment/2021/03/30/iterm_install/">
+<meta property="og:url" content="http://localhost:4000/environment/2021/03/30/iterm_install/">
 
 <link rel="alternate" type="application/atom+xml" title="SeungHun Feed" href="http://localhost:4000/feed.xml">
 
 
-  <link rel="prev" href="http://localhost:4000/tag/environment-python/">
+  <link rel="prev" href="http://localhost:4000/environment/2021/03/30/homebrew_install/">
 
 
-
-  <link rel="next" href="http://localhost:4000/tag/etc-paper/">
 
 
 <link rel="apple-touch-icon" href="http://localhost:4000/apple-touch-icon.png">
@@ -164,25 +160,241 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
     <main id="_main" class="content" role="main" data-color="#4f86aa" data-image="/assets/img/sidebarbackground.jpg">
       
 
+<article id="post-environment/2021/03/30/iterm_install" class="post" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        iTerm2 + Zsh + Oh My Zsh 설치 & 설정하기
+      
+    </h1>
+
+    <p class="post-date heading">
+      <time datetime="2021-03-30T00:00:00+09:00">30 Mar 2021</time>
+      
 
 
-<h2 class="sr-only">Pagination</h2>
-<nav class="pagination heading" role="navigation">
-  <ul>
-    <li class="pagination-item older" >
+
+
+
+
+
+
+
+in <a href="/category/environment/" data-flip="title">Environment</a>
+
       
-        <span>Older</span>
+
+
+
+
+
+
+
+
+
+on <a href="/tag/environment-etc/" data-flip="title">ETC</a>
+
+    </p>
+
+    
+  <div class="hr" style="padding-bottom:0"></div>
+
+
+  </header>
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+    <div class="markdown-body">
+
+
+
+
+
+<br/>
+      <p>맥을 설치하면 기본으로 Terminal이 설치되어있지만 사용하기에 불편하고 멋있어(?) 보이지 않아서 다른 터미널을 설치해서 사용하려고 한다.
+맥에서 가장 많이 추천되고 오랫동안 내가 사용해온 iTerm2 + zsh 를 설치하고 설정하는 방법을 알아보자.
+iTerm2를 사용하면서 가장 유용했던 기능은 화면 분할 기능이다. 데이터 크롤링을 하는데 10대 이상의 컴퓨터를 동시에 접속해서 관리 하는데 기본 터미널로만은 너무 힘들어서 화면 분할도 되고 다른 많은 기능도 있는 iTerm2를 찾게 됐다. 설치를 하고 설정을 해보자.</p>
+
+<h3 id="iterm2--zsh--oh-my-zsh-설치">iTerm2 + Zsh + Oh My Zsh 설치</h3>
+
+<h5 id="1-iterm2-설치">1. iTerm2 설치</h5>
+<p>아래 링크에 들어가서 다운받고 알집을 풀어서 설치하면 된다.
+iTerm2 홈페이지: <a href="https://iterm2.com/">https://iterm2.com/</a><br />
+iTerm2 기본 설치 화면이다.
+<img src="/assets/img/post_image/iterm_install/iterm.png" /><br /></p>
+
+<h5 id="2-zsh-설치">2. Zsh 설치</h5>
+<p>그런데 터미널의 제목표시줄을 보면 zsh가 기본 쉘로 이미 설정된 것을 볼 수 있다.
+확인해보니, MacOS 10.15버전인 카탈리나부터 기본 쉘이 bash에서 zsh로 변경되어서 OS를 설치하면서 기본으로 설치되어 있다.</p>
+
+<p>현재 내 컴퓨터에 어떤 쉘들이 설치되어 있는지 확인하려면 다음과 같은 명령으로 확인할 수 있다.</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /etc/shells
+</code></pre></div></div>
+
+<p>Zsh를 설치하기 위해서는 MacOS 패키지 관리 프로그램인 Homebrew를 사용해서 설치하면 된다.
+Homebrew를 설치하는 방법은 <a href="https://leesh90.github.io/environment/2021/03/30/homebrew_install/">Homebrew 설치 &amp; 사용하기</a>를 참고하면 된다.</p>
+
+<p>다음과 같은 쉘들이 기본으로 설치된 것을 확인할 수 있다.
+<img src="/assets/img/post_image/iterm_install/installed_shell_list.png" /><br /></p>
+
+<p>만약, 기본 쉘을 zsh에서 bash로 변경하고 싶으면 다음 명령어를 사용하면 된다.</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chsh <span class="nt">-s</span> /bin/bash
+</code></pre></div></div>
+
+<p>다음으로는 쉘을 사용하는데 도움을 많이 주는 Oh My Zsh을 설치한다.
+Oh My Zsh은 타이핑 교정, 명령어 추천, 자동 완성 기능등 여러가지 기능이 있다.
+설치는 아래 사이트에서 설치 명령어를 찾아서 하면 된다.</p>
+
+<p><a href="https://ohmyz.sh/#install">https://ohmyz.sh/#install</a><br />
+<a href="https://github.com/ohmyzsh/ohmyzsh">https://github.com/ohmyzsh/ohmyzsh</a></p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<!-- 
+<img src='/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png' width="270" height="300"> -->
+
+
+    </div>
+  
+
+</article>
+
+
+  <div class="share">
+      <h2>Share this post</h2>
+      <div class="share-body">
+        <a href="http://twitter.com/share?text=iTerm2 + Zsh + Oh My Zsh 설치 & 설정하기&amp;url=http://localhost:4000/environment/2021/03/30/iterm_install/"
+    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="icon-twitter">
+            </span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/environment/2021/03/30/iterm_install/"
+    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="icon-facebook">
+            </span>
+        </a>
+    </div>
+  </div>
+  <br/>
+
+
+
+
+
+  <aside class="author" role="complementary">
+    <div class="author">
+  <h2 class="page-title hr">
+    About
+  </h2>
+<div class="author-body">
+  
+    
+  
+
+  
+
+  <img
+    src="/assets/img/me_cscw.png"
+    class="me"
+    alt="SeungHun Lee"
+    srcset="/assets/img/me_cscw.png 1x,/assets/img/me_cscw.png 2x"
+    
+  />
+
+
+  
+  <div class="author-body-description">
+    <p>PH.D Student at the Sangmyung University</p>
+
+  </div>
+</div>
+</div>
+
+  </aside>
+
+
+
+
+
+<aside class="related" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
       
-    </li>
-    <li class="pagination-item newer" >
       
-        <span>Newer</span>
       
-    </li>
+        
+          
+          
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/environment/2021/03/30/homebrew_install/" data-flip="title">
+    <span>Homebrew 설치 & 사용하기</span>
+  </a>
+  <small><time datetime="2021-03-30T00:00:00+09:00">
+    30 Mar 2021
+  </time></small>
+</li>
+
+        
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/environment/2021/02/16/virtualenv-add-jupyter/" data-flip="title">
+    <span>Jupyter Notebook에 가상환경 커널 추가하기</span>
+  </a>
+  <small><time datetime="2021-02-16T00:00:00+09:00">
+    16 Feb 2021
+  </time></small>
+</li>
+
+        
+      
+        
+        
+          
+
+
+<li class="h4">
+  <a href="/environment/2021/02/16/python2_3/" data-flip="title">
+    <span>Using both Python 2.x & 3.x</span>
+  </a>
+  <small><time datetime="2021-02-16T00:00:00+09:00">
+    16 Feb 2021
+  </time></small>
+</li>
+
+        
+      
+    
   </ul>
-</nav>
+</aside>
 
 
+
+      
+        <aside class="comments" role="complementary">
+  <h2>Comments</h2>
+  <hr/>
+
+  <div id="disqus_thread"></div>
+
+  <script>
+    !function(s,i){function e(e){var t=s.pageYOffset||i.body.scrollTop;s.DISQUS&&!s._disqusThis&&!s._disqusFirst&&t+s.innerHeight>=s._disqusThreadOffsetTop&&(s._disqusThis=!0,s.DISQUS.reset({reload:!0,config:d}))}var d=function(){this.page.title="iTerm2 + Zsh + Oh My Zsh 설치 & 설정하기",this.page.identifier="/environment/2021/03/30/iterm_install",this.page.url="http://localhost:4000/environment/2021/03/30/iterm_install/"};s._disqusFirst=void 0===s._disqusFirst||s._disqusFirst,s._disqusLoading=void 0!==s._disqusLoading&&s._disqusLoading,s._disqusThis=!1,s._disqusThreadOffsetTop=i.getElementById("disqus_thread").offsetTop,s._disqusLoading?s._disqusFirst=!1:(s._disqusLoading=!0,loadJSDeferred("//leesh90.disqus.com/embed.js"),s.addEventListener?s.addEventListener("scroll",e,{passive:!0}):s.attachEvent?s.attachEvent("onscroll",e):s.onscroll=e)}(window,document);
+
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
 
       
 
@@ -338,7 +550,7 @@ Powered by Hydejack v6.4.0 (https://qwtel.com/hydejack/)
          
            
              <li>
-               <a class="sidebar-nav-subitem active" href="/tag/etc-book/">Book</a>
+               <a class="sidebar-nav-subitem" href="/tag/etc-book/">Book</a>
              </li>
            
          
