@@ -112,12 +112,15 @@ exclude:
   - Gemfile.lock
   - vendor
 
-kramdown:
-  footnote_backlink: '&#x21a9;&#xfe0e;'
-  math_engine:       mathjax
-  math_engine_opts:
-    preview:         true
-    preview_as_code: true
+markdown: kramdown
+highlighter: rouge
+
+# kramdown:
+#   footnote_backlink: '&#x21a9;&#xfe0e;'
+#   math_engine:       mathjax
+#   math_engine_opts:
+#     preview:         true
+#     preview_as_code: true
 
 compress_html:
   comments:          ["<!-- ", " -->"]
@@ -127,7 +130,7 @@ compress_html:
     envs:            [development]
 
 sass:
-  style:             compressed
+  style:             nested
 
 tipue_search:
   include:
@@ -137,3 +140,4 @@ tipue_search:
     files: [search.html, index.html, tags.html]
     categories: []
     tags: []
+

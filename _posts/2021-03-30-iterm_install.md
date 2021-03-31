@@ -13,7 +13,7 @@ comments: true
 iTerm2를 사용하면서 가장 유용했던 기능은 화면 분할 기능이다. 데이터 크롤링을 하는데 10대 이상의 컴퓨터를 동시에 접속해서 관리 하는데 기본 터미널로만은 너무 힘들어서 화면 분할도 되고 다른 많은 기능도 있는 iTerm2를 찾게 됐다. 설치를 하고 설정을 해보자.
 
 
-### iTerm2 + Zsh + Oh My Zsh 설치
+## iTerm2 + Zsh + Oh My Zsh 설치
 
 ##### 1. iTerm2 설치
 아래 링크에 들어가서 다운받고 알집을 풀어서 설치하면 된다.
@@ -44,11 +44,10 @@ Homebrew를 설치하는 방법은 [Homebrew 설치 & 사용하기](https://lees
 chsh -s /bin/bash
 ```
 
-
+##### 3. Oh My Zsh 설치
 다음으로는 쉘을 사용하는데 도움을 많이 주는 Oh My Zsh을 설치한다.
 Oh My Zsh은 타이핑 교정, 명령어 추천, 자동 완성 기능등 여러가지 기능이 있다.
 설치는 아래 사이트에서 설치 명령어를 찾아서 하면 된다.
-
 
 <https://ohmyz.sh/#install>  
 <https://github.com/ohmyzsh/ohmyzsh>

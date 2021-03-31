@@ -6,9 +6,130 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Mar 2021 18:01:08 +0900</pubDate>
-    <lastBuildDate>Tue, 30 Mar 2021 18:01:08 +0900</lastBuildDate>
+    <pubDate>Wed, 31 Mar 2021 13:13:58 +0900</pubDate>
+    <lastBuildDate>Wed, 31 Mar 2021 13:13:58 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>NAVER API를 사용해서 크롤링하기 - 2</title>
+        <description>&lt;p&gt;이전 포스팅에서 네이버 API를 신청하고, 내 애플리케이션까지 등록해서 API를 사용할 때 필요한 Client ID와 Secret을 모두 발급을 받았다.
+그리고 API Documents에서 검색 API에 관한 내용을 찾아서 아래의 Python 예제 코드까지 확인했는데 코드를 확인해보자.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;client_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;YOUR_CLIENT_ID&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;client_secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;YOUR_CLIENT_SECRET&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;encText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;검색할 단어&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://openapi.naver.com/v1/search/blog?query=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encText&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# json 결과
+# url = &quot;https://openapi.naver.com/v1/search/blog.xml?query=&quot; + encText # xml 결과
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-Naver-Client-Id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-Naver-Client-Secret&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;response_body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response_body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Error Code:&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;내-애플리케이션-인증&quot;&gt;내 애플리케이션 인증&lt;/h5&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;client_id = &quot;YOUR_CLIENT_ID&quot;
+client_secret = &quot;YOUR_CLIENT_SECRET&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;우선 이 부분은 내가 네이버 API를 사용하기 전에 나라는 걸 인증하는 인증키와 키를 입력하는 부분이다.
+이전 포스팅에서 내 애플리케이션에서 발급받은 Client ID와 Client Secret을 여기에 입력하면 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;검색-키워드-parsing&quot;&gt;검색 키워드 Parsing&lt;/h5&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;encText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;검색할 단어&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;네이버 뉴스, 쇼핑, 블로그 등에서 특정한 글을 찾고 싶을 때 검색할 단어를 입력한다. 크롤링을 할 때도 어떤 단어를 기반으로 검색할 것인지 검색할 단어를 입력한다. 하지만, 내가 검색할 단어에 특수문자가 포함 되어있으면 특수문자 그대로 전달을 할 수 없다. 한글도 특수문자에 해당한다. 따라서 인코딩 작업이 필요한데 quote 함수가 인코딩 작업을 해준다.
+“코로나”를 인코딩하면 다음과 같이 나온다.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Encoding_word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;코로나&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Encoding_word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;'%EC%BD%94%EB%A1%9C%EB%82%98'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;요청-url&quot;&gt;요청 URL&lt;/h5&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://openapi.naver.com/v1/search/blog?query=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encText&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# json 결과
+# url = &quot;https://openapi.naver.com/v1/search/blog.xml?query=&quot; + encText # xml 결과
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;검색할 단어까지 확인됐으면, 단어를 매개변수로 포함해서 요청할 URL 주소가 완성된다. 요청한 URL에 대한 응답 결과를 받을 때 2가지 방식의 출력 포맷으로 제공해준다. 아래 그림에서 보는 것처럼 XML과 JSON 형태로 제공된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post_image/crwaling_naver_api/api_information.png&quot; /&gt;
+default로 JSON 출력 포맷의 결과를 제공해주는데 XML 결과로 받고 싶으면 blog.xml로 요청해주면 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;요청--응답&quot;&gt;요청 &amp;amp; 응답&lt;/h5&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-Naver-Client-Id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-Naver-Client-Secret&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;##요청 &amp;amp; 응답
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;response_body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response_body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Error Code:&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Naver 블로그 서버에 요청할 객체를 생성하고, 나를 인증하는 id와 secret 정보를 헤더에 포함해서 요청을 한다. 요청 처리에 대한 응답을 response에 저장하고 getcode() 함수로 상태 코드를 알아낸다. 웹 페이지가 제대로 요청이 되었으면 일반적으로 HTTP 코드 200을 반환한다. 응답 코드가 200이면 read() 함수로 데이터를 읽어서 출력해서 확인하면 된다. 응답한 내용은 바이트 타입이므로 UTF-8 디코딩을 통해 문자열로 변경한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+“코로나”라는 단어로 검색한 결과를 확인하면 다음과 같다.
+&lt;img src=&quot;/assets/img/post_image/crwaling_naver_api/result_of_corona.png&quot; /&gt; &lt;br /&gt;
+출력된 결과가 의미하는 것들은 출력 결과 설명 부분을 확인하면 알 수 있다.
+&lt;img src=&quot;/assets/img/post_image/crwaling_naver_api/result_information.png&quot; /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;API를 사용해서 받은 블로그 검색 결과와 네이버 블로그 홈페이지에서 코로나를 직접 입력해서 나온 결과를 비교해보면 첫 번째 글의 제목이 “코로나 백신 (아스트라제네카)…” 로 같은 것을 확인할 수 있다.
+&lt;img src=&quot;/assets/img/post_image/crwaling_naver_api/result_of_corona_blog.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+혹시라도 요청이 부적절하거나 오타가 나는 등의 이유로 요청이 이루어지지 않은 경우 에러코드를 출력하는데 다음과 같은 에러들이 있다.&lt;br /&gt;
+&lt;img src=&quot;/assets/img/post_image/crwaling_naver_api/error_code.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;요청-변수&quot;&gt;요청 변수&lt;/h5&gt;
+&lt;p&gt;위에 “코로나” 블로그 검색 결과를 살펴보면 결과 Key 값들 중에 start, display를 확인할 수 있다. start는 검색 시작 위치를 몇 번째 글부터 시작할지, display는 총 몇 개의 글을 출력할 것인지 건수를 정하는 변수다. 내가 처음에 요청한 결과는 URL에서 필수 변수에 해당하는 검색 단어 query만 입력했다. query 이외에도 display, start와 유사도 또는 날짜순으로 정렬을 할 수 있는 sort 옵션까지 요청 변수를 추가할 수 있다. 요청 변수는 다음과 같다.&lt;br /&gt;
+&lt;img src=&quot;/assets/img/post_image/crwaling_naver_api/request_variable.png&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;요청 변수를 모두 사용해서 요청하는 예제는 다음과 같다.&lt;/p&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl  &lt;span class=&quot;s2&quot;&gt;&quot;https://openapi.naver.com/v1/search/blog.xml?query=%EB%A6%AC%EB%B7%B0&amp;amp;display=10&amp;amp;start=1&amp;amp;sort=sim&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X-Naver-Client-Id: {애플리케이션 등록 시 발급받은 client id 값}&quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X-Naver-Client-Secret: {애플리케이션 등록 시 발급받은 client secret 값}&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;query가 무엇인지 확인하기 위해서 quote parsing을 반대로 진행한다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unquote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%EB%A6%AC%EB%B7%B0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;리뷰&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;검색할 단어는 리뷰이며, 검색할 건수는 10건이며, 시작은 첫 번째 글부터 시작하며, 유사도 정렬 순으로 출력을 했다. 
+만약 시작을 15번째 글부터 시작해서 100건을 날짜순으로 출력하고 싶으면 다음과 같이 요청 URL을 사용하면 된다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://openapi.naver.com/v1/search/blog.xml?query=%EB%A6%AC%EB%B7%B0&amp;amp;display=100&amp;amp;start=15&amp;amp;sort=date&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;또한, 블로그가 아니라 뉴스, 카페, 영화, 쇼핑 등 다른 카테고리의 검색 결과를 요청하고 싶으면 “blog”를 “news”, “cafearticle”, “movie”, “shop” 으로 변경할 수도 있다. 이는 API 검색 문서에서 다른 카테고리들을 확인해보면 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 31 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/development/2021/03/31/crawling_naver_api-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/development/2021/03/31/crawling_naver_api-2/</guid>
+        
+        <category>crawling</category>
+        
+        
+        <category>development</category>
+        
+      </item>
     
       <item>
         <title>iTerm2 + Zsh + Oh My Zsh 설치 &amp; 설정하기</title>
@@ -16,7 +137,7 @@
 맥에서 가장 많이 추천되고 오랫동안 내가 사용해온 iTerm2 + zsh 를 설치하고 설정하는 방법을 알아보자.
 iTerm2를 사용하면서 가장 유용했던 기능은 화면 분할 기능이다. 데이터 크롤링을 하는데 10대 이상의 컴퓨터를 동시에 접속해서 관리 하는데 기본 터미널로만은 너무 힘들어서 화면 분할도 되고 다른 많은 기능도 있는 iTerm2를 찾게 됐다. 설치를 하고 설정을 해보자.&lt;/p&gt;
 
-&lt;h3 id=&quot;iterm2--zsh--oh-my-zsh-설치&quot;&gt;iTerm2 + Zsh + Oh My Zsh 설치&lt;/h3&gt;
+&lt;h2 id=&quot;iterm2--zsh--oh-my-zsh-설치&quot;&gt;iTerm2 + Zsh + Oh My Zsh 설치&lt;/h2&gt;
 
 &lt;h5 id=&quot;1-iterm2-설치&quot;&gt;1. iTerm2 설치&lt;/h5&gt;
 &lt;p&gt;아래 링크에 들어가서 다운받고 알집을 풀어서 설치하면 된다.
@@ -42,6 +163,7 @@ Homebrew를 설치하는 방법은 &lt;a href=&quot;https://leesh90.github.io/en
 &lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chsh &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; /bin/bash
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h5 id=&quot;3-oh-my-zsh-설치&quot;&gt;3. Oh My Zsh 설치&lt;/h5&gt;
 &lt;p&gt;다음으로는 쉘을 사용하는데 도움을 많이 주는 Oh My Zsh을 설치한다.
 Oh My Zsh은 타이핑 교정, 명령어 추천, 자동 완성 기능등 여러가지 기능이 있다.
 설치는 아래 사이트에서 설치 명령어를 찾아서 하면 된다.&lt;/p&gt;
@@ -51,8 +173,11 @@ Oh My Zsh은 타이핑 교정, 명령어 추천, 자동 완성 기능등 여러�
 &lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;To be=&quot;&quot; Continued...=&quot;&quot;&gt;
+
 &lt;!-- 
 &lt;img src='/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png' width=&quot;270&quot; height=&quot;300&quot;&gt; --&gt;
+&lt;/To&gt;
 </description>
         <pubDate>Tue, 30 Mar 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/environment/2021/03/30/iterm_install/</link>
@@ -67,14 +192,34 @@ Oh My Zsh은 타이핑 교정, 명령어 추천, 자동 완성 기능등 여러�
     
       <item>
         <title>Homebrew 설치 &amp; 사용하기</title>
-        <description>&lt;p&gt;MacOS를 설치하고 가장 먼저 해야될 일중에 하나가 MacOS 패키지 관리 프로그램인 Homebrew를 설정하는 것이다.
-리눅스에서는 yum, apt와 같은 역할을 한다고 볼수있다.&lt;/p&gt;
+        <description>&lt;h2 id=&quot;homebrew-설치하기&quot;&gt;Homebrew 설치하기&lt;/h2&gt;
 
-&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/bin/bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;p&gt;MacOS를 설치하고 가장 먼저 해야될 일중에 하나가 MacOS 패키지 관리 프로그램인 Homebrew를 설정하는 것이다.
+리눅스에서는 yum, apt와 같은 역할을 한다고 볼수있다. 설치하는 방법은 아래 링크로 들어가서 확인하거나 아래 명령어를 실행하면 된다.
+Homebrew 홈페이지: &lt;a href=&quot;https://brew.sh/index_ko&quot;&gt;https://brew.sh/index_ko&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;/bin/bash &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;참고로 curl과 ssl을 사용하기 전에는 kaspersky같은 보안 프로그램이나 vpn을 켜놓았으면 꼭 끄고 위 명령어를 실행하세요.&lt;/strong&gt;
 &lt;!-- 
-&lt;img src='/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png' width=&quot;270&quot; height=&quot;300&quot;&gt; --&gt;
+&lt;img src='/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png' width=&quot;270&quot; height=&quot;300&quot;&gt; --&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;homebrew-사용하기&quot;&gt;Homebrew 사용하기&lt;/h2&gt;
+&lt;h5 id=&quot;패키지-설치&quot;&gt;패키지 설치&lt;/h5&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &amp;lt;Package name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;패키지-삭제&quot;&gt;패키지 삭제&lt;/h5&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew remove &amp;lt;Package name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;패키지-업그레이드&quot;&gt;패키지 업그레이드&lt;/h5&gt;
+&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew upgrade &amp;lt;Package name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;To be=&quot;&quot; Continued...=&quot;&quot;&gt;
+&lt;/To&gt;
 </description>
         <pubDate>Tue, 30 Mar 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/environment/2021/03/30/homebrew_install/</link>
@@ -88,8 +233,8 @@ Oh My Zsh은 타이핑 교정, 명령어 추천, 자동 완성 기능등 여러�
       </item>
     
       <item>
-        <title>NAVER API를 사용해서 크롤링하기</title>
-        <description>&lt;h4 id=&quot;1-네이버-개발자-api-가입--이용-신청&quot;&gt;1. 네이버 개발자 API 가입 &amp;amp; 이용 신청&lt;/h4&gt;
+        <title>NAVER API를 사용해서 크롤링하기 - 1</title>
+        <description>&lt;h2 id=&quot;1-네이버-개발자-api-가입--이용-신청&quot;&gt;1. 네이버 개발자 API 가입 &amp;amp; 이용 신청&lt;/h2&gt;
 
 &lt;p&gt;네이버 API를 사용하기 위해서는 우선 네이버 개발자 센터에 가입하고 오픈 API 이용 신청을 해야 한다.
 아래 링크에 들어가서 신청을 한다.&lt;/p&gt;
@@ -109,23 +254,45 @@ Oh My Zsh은 타이핑 교정, 명령어 추천, 자동 완성 기능등 여러�
 일반적인 사용자들은 하단에 보이는 것처럼 하루 API 사용량이 25,000번으로 제한되어 있다. 일일 사용량을 초과해서 사용하려면 왼쪽에 API 제휴 신청을 하면 된다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;2-검색-api-documents&quot;&gt;2. 검색 API Documents&lt;/h4&gt;
+&lt;h2 id=&quot;2-검색-api-documents&quot;&gt;2. 검색 API Documents&lt;/h2&gt;
 
 &lt;p&gt;네이버 개발자 메인 페이지 상단에서 [Documents] - [서비스 API] - [검색]을 선택하면 검색 API에 대한 Documents를 아래와 같이 확인할 수 있다.
 &lt;img src=&quot;/assets/img/post_image/crwaling_naver_api/search_api_documents.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;페이지를 내려서 확인해보면 Python 코드도 확인할 수 있다. 나는 Python을 사용해서 크롤링을 하므로 이 코드를 가지고 수정해서 사용하면 된다.
-&lt;img src=&quot;/assets/img/post_image/crwaling_naver_api/search_api_python_example.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;페이지를 내려서 확인해보면 Python 코드를 확인할 수 있다.&lt;/p&gt;
 
-&lt;h4 id=&quot;3&quot;&gt;3.&lt;/h4&gt;
+&lt;h4 id=&quot;블로그-검색-api-python-코드-예제&quot;&gt;블로그 검색 API Python 코드 예제&lt;/h4&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 네이버 검색 API예제는 블로그를 비롯 전문자료까지 호출방법이 동일하므로 blog검색만 대표로 예제를 올렸습니다.
+# 네이버 검색 Open API 예제 - 블로그 검색
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;client_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;YOUR_CLIENT_ID&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;client_secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;YOUR_CLIENT_SECRET&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;encText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;검색할 단어&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://openapi.naver.com/v1/search/blog?query=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encText&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# json 결과
+# url = &quot;https://openapi.naver.com/v1/search/blog.xml?query=&quot; + encText # xml 결과
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-Naver-Client-Id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-Naver-Client-Secret&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;response_body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response_body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Error Code:&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rescode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음 포스팅에서는 아래의 Python 코드를 사용해서 데이터를 실제로 크롤링을 해보자.&lt;br /&gt;
+&lt;a href=&quot;https://leesh90.github.io/development/2021/03/29/crawling_naver_api-2/&quot;&gt;NAVER API를 사용해서 크롤링하기 - 2&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- 
 &lt;img src='/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png' width=&quot;270&quot; height=&quot;300&quot;&gt; --&gt;
 </description>
         <pubDate>Mon, 29 Mar 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/development/2021/03/29/crawling_naver_api/</link>
-        <guid isPermaLink="true">http://localhost:4000/development/2021/03/29/crawling_naver_api/</guid>
+        <link>http://localhost:4000/development/2021/03/29/crawling_naver_api-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/development/2021/03/29/crawling_naver_api-1/</guid>
         
         <category>crawling</category>
         
