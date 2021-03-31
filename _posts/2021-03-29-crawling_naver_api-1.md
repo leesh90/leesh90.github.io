@@ -61,7 +61,7 @@ else:
 
 
 다음 포스팅에서는 아래의 Python 코드를 사용해서 데이터를 실제로 크롤링을 해보자.  
-[NAVER API를 사용해서 크롤링하기 - 2](https://leesh90.github.io/development/2021/03/29/crawling_naver_api-2/)
+[NAVER API를 사용해서 크롤링하기 - 2](https://leesh90.github.io/development/2021/03/31/crawling_naver_api-2/)
 
 <!-- 
 <img src='{{"/assets/img/post_image/virtualenv-add-jupyter/kernel_add_check.png"}}' width="270" height="300"> -->
