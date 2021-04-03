@@ -74,11 +74,11 @@ $ chmod 755 /usr/local/share/zsh/site-functions
 
 #### 폰트 설치
 
-내가 원하는 폰트를 설치할 수 있다. 개발자에게 가독성이 좋다는 Naver D2coding 폰트를 설정 해보자.
+내가 원하는 폰트를 설치할 수 있다. 개발자에게 가독성이 좋다는 Naver D2coding 폰트로 설정을 한다.
 ```zsh
 $ git clone https://github.com/naver/d2codingfont.git
 ```
-코드를 다운받고 d2codingfont 폴더를 들어가서 최신버전 폰트 압축파일의 압축을 풀고 들어가서 D2CodingAll 폴더에 있는 글꼴을 설치한다. 더블클릭을 해주면 된다.
+코드를 다운받고 d2codingfont 폴더를 들어가서 최신버전 폰트 압축파일의 압축을 풀고 들어가서 D2CodingAll 폴더에 있는 글꼴을 설치한다. 더블 클릭을 해주면 된다.
 
 그리고 터미널 Preferences로 들어가서 아래처럼 Profiles에 Text로 들어간다. 그리고 Font를 D2coding으로 변경해준다.
 <img src='{{"/assets/img/post_image/iterm_install/preference.png"}}'><br/>
@@ -87,7 +87,7 @@ $ git clone https://github.com/naver/d2codingfont.git
 
 #### 폰트 깨짐
 
-한글 폰트가 깨지는 경우가 있는데, 폰트 설정할 때 들어갔던 [Preferences] - [Profiles] - [Text]로 들어가서 Unicode normalization form으로 가서 None으로 설정된 것을 NFC로 변경해준다.
+한글 폰트가 깨지는 경우가 있는데, 폰트 설정할 때 들어갔던 [Preferences] - [Profiles] - [Text]로 들어가서 Unicode normalization form을 NFC로 변경해준다.
 
 
 
