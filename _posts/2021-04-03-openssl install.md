@@ -15,7 +15,7 @@ comments: true
 $ brew install openssl
 ```
 
-설치하면 다음과 같은 경고가 나온다.
+설치하면 다음과 같은 경고가 나온다. 맥에서 기본적으로 제공하고 있는 LibreSSL이 기본 ssl로 설정되어 있는데 내가 설치한 openssl로 설정하려면 어떻게 해야 되는지 알려주는 것이다.
 ```zsh
 A CA file has been bootstrapped using certificates from the system
 keychain. To add additional certificates, place .pem files in
@@ -36,8 +36,7 @@ For compilers to find openssl@1.1 you may need to set:
 
 ```
 
-
-MacOS에서 기본으로 제공하는 openssl 프로그램이 있다. 내가 설치한 openssl 버전으로 변경하고 싶으면 아래를 등록한다.
+쉘 설정 파일에다가 PATH 정보를 직접 입력해주거나 아래처럼 명렁어를 실행시켜도 괜찮다.
 ```zsh
 # zsh 
 $ echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
@@ -47,7 +46,7 @@ $ echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile o
 
 ```
 
-LDFLAGS, CPPFLAGS의 Path도 설정을 해야 하는데, LDFLAGS는 LD 링커의 플래그, CPPFLAGS는 C 전처리기의 플래그로 주로 Makefile에서 사용된다. 아래 2개도 내가 사용하는 쉘 설정 파일에 등록을 해준다.
+그리고 여러 프로그램이나 오픈소스등을 설치할 때 openssl을 필요로 하는 경우가 많은데 내가 현재 설치한 openssl로 설정을 바꿔야 하는데 다음과 같이 한다. LDFLAGS, CPPFLAGS의 Path 설정을 해야 하는데, LDFLAGS는 LD 링커의 플래그, CPPFLAGS는 C 전처리기의 플래그로 주로 Makefile에서 사용된다. 아래 2개도 내가 사용하는 쉘 설정 파일에 등록을 해준다.
 
 ```zsh
 # ~/.bashrc or ~/.bash_profile or ~/.zshrc
