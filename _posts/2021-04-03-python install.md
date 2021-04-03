@@ -30,6 +30,7 @@ $ brew install pyenv pyenv-virtualenv
 ##### 환경변수 설정
 설치후에 아래 내용을 쉘 설정 파일에 입력한다.
 ```zsh
+# ~/.zshrc
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
@@ -39,7 +40,7 @@ eval "$(pyenv virtualenv-init -)"
 #### pyenv 사용하기
 pyenv를 사용해서 내가 원하는 버전의 Python을 다음과 같이 설치하고 관리할 수 있다.
 ```zsh
-#설치 가능한 Python 버전
+# 설치 가능한 Python 버전
 $ pyenv install --list
 
 # 특정한 버전 Python 설치
