@@ -89,12 +89,14 @@ $ git clone https://github.com/naver/d2codingfont.git
 
 한글 폰트가 깨지는 경우가 있는데, 폰트 설정할 때 들어갔던 [Preferences] - [Profiles] - [Text]로 들어가서 Unicode normalization form을 NFC로 변경해준다.
 
+<!-- 
 #### 터미널에서 컴퓨터 이름 제거하기
 
 터미널은 기본적으로 username@computername 이렇게 출력이 된다.
 <img src='{{"/assets/img/post_image/iterm_install/command_name.png"}}'>
 너무 길어서 비효율적인데 뒤에 computername을 지울려면 다음 코드를 "zshrc" 에 추가를 한다.
-
+ -->
+ 
 <!-- ```zsh
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
