@@ -95,3 +95,13 @@ $ git clone https://github.com/naver/d2codingfont.git
 <img src='{{"/assets/img/post_image/iterm_install/command_name.png"}}'>
 너무 길어서 비효율적인데 뒤에 computername을 지울려면 다음 코드를 "zshrc" 에 추가를 한다.
 
+
+{% raw %} 
+```zsh
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
+```
+{% endraw %}
