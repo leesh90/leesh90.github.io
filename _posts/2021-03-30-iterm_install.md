@@ -87,7 +87,7 @@ $ git clone https://github.com/naver/d2codingfont.git
 
 #### 폰트 깨짐
 
-한글 폰트가 깨지는 경우가 있는데, 폰트 설정할 때 들어갔던 [Preferences] - [Profiles] - [Text]로 들어가서 Unicode normalization form을 NFC로 변경해준다.
+<!-- 한글 폰트가 깨지는 경우가 있는데, 폰트 설정할 때 들어갔던 [Preferences] - [Profiles] - [Text]로 들어가서 Unicode normalization form을 NFC로 변경해준다. -->
 
 <!-- 
 #### 터미널에서 컴퓨터 이름 제거하기
