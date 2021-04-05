@@ -94,7 +94,7 @@ $ git clone https://github.com/naver/d2codingfont.git
 
 터미널은 기본적으로 username@computername 이렇게 출력이 된다.
 <img src='{{"/assets/img/post_image/iterm_install/command_name.png"}}'>
-너무 길어서 비효율적인데 뒤에 computername을 지울려면 다음 코드를 ~/.zshrc 에 추가를 한다.
+너무 길어서 비효율적인데 뒤에 computername을 지울려면 다음 코드를 "zshrc" 에 추가를 한다.
 
 ```zsh
 prompt_context() {
