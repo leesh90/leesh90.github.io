@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[MacOS] Python 설치 및 버전관리"
+title: "[MacOS] Python(pyenv) 설치 및 버전관리"
 subtitle: ""
 categories: environment
 tags: etc
@@ -31,9 +31,10 @@ $ brew install pyenv pyenv-virtualenv
 설치후에 아래 내용을 쉘 설정 파일에 입력한다.
 ```zsh
 # ~/.zshrc
-export PATH="$HOME/.pyenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 ```
 
 
