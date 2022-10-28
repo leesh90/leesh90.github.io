@@ -44,6 +44,10 @@ order: 1
 
 ### Journal
 
+ - [Backers Beware: Characteristics and Detection of Fraudulent Crowdfunding Campaigns][8]<br>
+ Seung-hun Lee, Wafa Shafqat, and Hyun-chul Kim<br>
+ Journal of MDPI Sensors, Volume 22, Number 19, pp. 7677, Oct. 2022.
+
  - [Crowdfunding Scams : The Profiles and Language of Deceivers][4]<br>
  Seung-hun Lee, and Hyun-chul Kim<br>
  Journal of The Korea Society of Computer and Information, Volume 23, Number 3, pp. 55-62, Mar. 2018.
@@ -86,3 +90,4 @@ order: 1
 [5]:{{site.url}}/papers/Predicting_Success_of_Crowdfunding_Campaigns.pdf
 [6]:{{site.url}}/papers/Smart_SNS_Map.pdf
 [7]:{{site.url}}/papers/Traffic_Classification_using_Deep_Learning.pdf
+[8]:{{site.url}}/papers/Characteristics_and_Detection_of_Fraudulent_Crowdfunding_Campaigns.pdf
