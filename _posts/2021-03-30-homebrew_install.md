@@ -11,6 +11,7 @@ comments: true
 
 MacOS를 설치하고 가장 먼저 해야될 일중에 하나가 MacOS 패키지 관리 프로그램인 Homebrew를 설정하는 것이다.
 리눅스에서는 yum, apt와 같은 역할을 한다고 볼수있다. 설치하는 방법은 아래 링크로 들어가서 확인하거나 아래 명령어를 실행하면 된다.
+
 Homebrew 홈페이지: <https://brew.sh/index_ko>
 
 ```zsh
