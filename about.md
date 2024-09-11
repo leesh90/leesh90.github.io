@@ -21,6 +21,7 @@ order: 1
  - Data Mining, Machine Learning, Deep Learning
  - Explainable AI
  - NLP(Natural Language Processing)
+ - Large Language Model(LLM)
 
 ## Publications
 ### Conferences
@@ -61,10 +62,16 @@ order: 1
  Journal of Korea Multimedia Society, Volume 19, Number 2, pp. 428-435, Feb. 2016.<br><br>
 
 ## Projects
+ - Explainability in Graph Neural Networks for Internet Traffic Classification <br>
+ (sponsored by the National Research Foundation, Korea) 2023.06 ~ 2025.02
+ - Research on Virtualization-based 5G Networks and Cyber Threats <br>
+  (sponsored by National Security Research Institute, Korea) 2023.04~2023.10
+ - Deep Learning based Internet Traffic Classification: Myths, Realities, and their Explainabilities <br>
+ (sponsored by the National Research Foundation, Korea) 2022.06 ~ 2023.05
  - Multi-modal data-driven Explainable AI systems and the Future of Digital Finance <br>
- (sponsored by the National Research Foundataion, Korea) 2019.9 ~ 2022.2
+ (sponsored by the National Research Foundataion, Korea) 2019.09 ~ 2022.02
  - Towards Explainable AI in Next-Generation Intrusion Detection systems <br>
- (sponsored by National Security Research Institute, Korea) 2019.4~2019.10
+ (sponsored by National Security Research Institute, Korea) 2019.04~2019.10
  - Statistics-based Network Behavior Modeling <br>
  (sponsored by National Security Research Institute, Korea) 2018.05 ~ 2018.10
  - Traffic Measurement in Anonymity Networks <br>
@@ -72,7 +79,7 @@ order: 1
  - Characterization and Automatic Labeling of Malicious Traffic in Control System Networks <br>
  (sponsored by National Security Research Institute, Korea) 2017.04 ~ 2017.10
  - Network Traffic Classification for Intrusion Detection <br>
- (sponsored by National Security Research Institute, Korea) 2015.6 ~ 2015.12
+ (sponsored by National Security Research Institute, Korea) 2015.06 ~ 2015.12
 
 
 ## Education
