@@ -45,7 +45,7 @@ order: 1
 
 ### Journal
 
- - Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods<br>
+ - [Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods][9]<br>
  Seung-hun Lee, Heemin Park, and Hyun-chul Kim<br>
  IEEE Access,  Mar. 2025.
 
@@ -102,3 +102,4 @@ order: 1
 [6]:{{site.url}}/papers/Smart_SNS_Map.pdf
 [7]:{{site.url}}/papers/Traffic_Classification_using_Deep_Learning.pdf
 [8]:{{site.url}}/papers/Characteristics_and_Detection_of_Fraudulent_Crowdfunding_Campaigns.pdf
+[9]:https://ieeexplore.ieee.org/document/10909102
