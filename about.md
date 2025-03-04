@@ -45,6 +45,10 @@ order: 1
 
 ### Journal
 
+ - Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods<br>
+ Seung-hun Lee, Heemin Park, and Hyun-chul Kim<br>
+ IEEE Access,  Mar. 2025.
+
  - [Backers Beware: Characteristics and Detection of Fraudulent Crowdfunding Campaigns][8]<br>
  Seung-hun Lee, Wafa Shafqat, and Hyun-chul Kim<br>
  Journal of MDPI Sensors, Volume 22, Number 19, pp. 7677, Oct. 2022.
