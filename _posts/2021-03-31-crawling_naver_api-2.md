@@ -68,7 +68,7 @@ url = "https://openapi.naver.com/v1/search/blog.xml?query=" + encText # xml 결�
 - 검색 결과는 JSON 또는 XML 형식으로 제공된다.
 - 기본값은 JSON 형식이며, XML을 원할 경우 `.xml` 확장자를 사용한다.
 
-![API 정보](/assets/img/post_image/crwaling_naver_api/api_information.png)
+![API 정보](/assets/img/posts/crwaling_naver_api/api_information.png)
 
 #### 4. 요청 및 응답 처리
 
@@ -94,17 +94,17 @@ else:
 ### 검색 결과 예시
 
 "코로나" 키워드로 검색한 결과:
-![코로나 검색 결과](/assets/img/post_image/crwaling_naver_api/result_of_corona.png)
+![코로나 검색 결과](/assets/img/posts/crwaling_naver_api/result_of_corona.png)
 
 검색 결과 필드 설명:
-![결과 정보](/assets/img/post_image/crwaling_naver_api/result_information.png)
+![결과 정보](/assets/img/posts/crwaling_naver_api/result_information.png)
 
 네이버 블로그 직접 검색 결과와 비교:
-![블로그 검색 결과](/assets/img/post_image/crwaling_naver_api/result_of_corona_blog.png)
+![블로그 검색 결과](/assets/img/posts/crwaling_naver_api/result_of_corona_blog.png)
 
 ### 에러 코드
 요청이 실패할 경우 발생하는 에러 코드들:
-![에러 코드](/assets/img/post_image/crwaling_naver_api/error_code.png)
+![에러 코드](/assets/img/posts/crwaling_naver_api/error_code.png)
 
 ## 2. 요청 변수 설정
 
@@ -113,7 +113,7 @@ else:
 - `display`: 출력할 결과 개수
 
 ### 사용 가능한 요청 변수
-![요청 변수](/assets/img/post_image/crwaling_naver_api/request_variable.png)
+![요청 변수](/assets/img/posts/crwaling_naver_api/request_variable.png)
 
 ### 요청 변수 사용 예시
 
