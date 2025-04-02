@@ -99,9 +99,9 @@ order: 3
       <h3 class="publication-title">Traffic Classification using Deep Learning: High Accuracy is Not Enough</h3>
       <p class="publication-authors">Kanghee Lee, Seunghun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">ACM SIGCOMM, New York City, Aug. 2020.(Poster)</p>
-      <p class="publication-description">
+      <!-- <p class="publication-description">
         Deep learning approach for network traffic classification with focus on practical applicability and performance metrics beyond accuracy.
-      </p>
+      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Deep Learning</span>
         <span class="publication-tag">Network Traffic</span>
