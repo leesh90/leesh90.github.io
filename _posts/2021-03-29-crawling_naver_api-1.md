@@ -15,7 +15,7 @@ tags: [crawling, data collection, naver api]
 아래 링크에서 신청을 진행할 수 있다:
 
 네이버 개발자 센터 : <https://developers.naver.com/main/>
-![developers_naver_main](../assets/img/posts/crawling_naver_api/developers_naver_main.png)
+![developers_naver_main](/assets/img/posts/crawling_naver_api/developers_naver_main.png)
 
 ### 애플리케이션 등록 과정
 
