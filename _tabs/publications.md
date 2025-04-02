@@ -94,7 +94,7 @@ order: 3
 <div class="publication-container">
 <!-- Traffic Classification Paper -->
     <a href="/papers/Traffic_Classification_using_Deep_Learning.pdf" class="publication-card">
-    <img src="/assets/img/publications/traffic_classification.jpg" alt="Traffic Classification Paper" class="publication-image">
+    <!-- <img src="/assets/img/publications/traffic_classification.jpg" alt="Traffic Classification Paper" class="publication-image"> -->
     <div class="publication-info">
       <h3 class="publication-title">Traffic Classification using Deep Learning: High Accuracy is Not Enough</h3>
       <p class="publication-authors">Kanghee Lee, Seunghun Lee, and Hyun-chul Kim</p>
@@ -112,7 +112,7 @@ order: 3
 
   <!-- Crowdfunding Success Prediction Paper -->
   <a href="/papers/Content-based_Success_Prediction_of_Crowdfunding.pdf" class="publication-card">
-    <img src="/assets/img/publications/crowdfunding_prediction.jpg" alt="Crowdfunding Prediction Paper" class="publication-image">
+    <!-- <img src="/assets/img/publications/crowdfunding_prediction.jpg" alt="Crowdfunding Prediction Paper" class="publication-image"> -->
     <div class="publication-info">
       <h3 class="publication-title">Content-based Success Prediction of Crowdfunding Campaigns: A Deep Learning Approach</h3>
       <p class="publication-authors">Seunghun Lee, Kanghee Lee, and Hyun-chul Kim</p>
