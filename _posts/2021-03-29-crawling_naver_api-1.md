@@ -12,7 +12,7 @@ tags: [crawling, data collection, naver api]
 ## 1. 네이버 개발자 API 가입 & 이용 신청
 
 네이버 API를 사용하기 위해서는 우선 네이버 개발자 센터에 가입하고 오픈 API 이용 신청을 해야 한다.  
-아래 링크에서 신청을 진행할 수 있다123123:111
+아래 링크에서 신청을 진행할 수 있다.
 
 네이버 개발자 센터 : <https://developers.naver.com/main/>
 ![developers_naver_main](/assets/img/posts/crawling_naver_api/developers_naver_main.png)
