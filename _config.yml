@@ -94,7 +94,7 @@ theme_mode: light # [light | dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn: "https://chirpy-img.netlify.app"
+cdn: ""  # CDN 설정을 비워서 로컬 이미지를 사용하도록 합니다
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "/commons/avatar.jpg"
