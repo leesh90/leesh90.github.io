@@ -133,7 +133,7 @@ order: 3
 <h2 class="section-title">Journal</h2>
 <div class="publication-container">
   <!-- Fraud Detection Paper -->
-  <a href="/papers/Fraud_Detection_on_Crowdfunding_Platforms.pdf" class="publication-card">
+  <a href="/papers/Fraud_Detection_IEEEAccess.pdf" class="publication-card">
     <img src="/assets/img/publications/fraud_detection.jpg" alt="Fraud Detection Paper" class="publication-image">
     <div class="publication-info">
       <h3 class="publication-title">Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods</h3>
