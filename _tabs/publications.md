@@ -134,7 +134,7 @@ order: 3
 <div class="publication-container">
   <!-- Fraud Detection Paper -->
   <a href="/papers/Fraud_Detection_IEEEAccess.pdf" class="publication-card">
-    <img src="/assets/img/publications/fraud_detection.jpg" alt="Fraud Detection Paper" class="publication-image">
+    <!-- <img src="/assets/img/publications/fraud_detection.jpg" alt="Fraud Detection Paper" class="publication-image"> -->
     <div class="publication-info">
       <h3 class="publication-title">Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods</h3>
       <p class="publication-authors">Seung-hun Lee, Heemin Park, and Hyun-chul Kim</p>
