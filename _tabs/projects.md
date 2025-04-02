@@ -65,36 +65,3 @@ order: 2
 }
 </style>
 
-<div class="project-container">
-  <!-- 프로젝트 1 -->
-  <a href="/projects/project1" class="project-card">
-    <img src="/assets/img/projects/project1.jpg" alt="Project 1" class="project-image">
-    <div class="project-info">
-      <h3 class="project-title">프로젝트 제목 1</h3>
-      <p class="project-description">
-        프로젝트에 대한 간단한 설명을 여기에 작성합니다.
-        핵심 내용을 2-3줄로 요약하면 좋습니다.
-      </p>
-      <div class="project-tags">
-        <span class="project-tag">Python</span>
-        <span class="project-tag">Machine Learning</span>
-      </div>
-    </div>
-  </a>
-
-  <!-- 프로젝트 2 -->
-  <a href="/projects/project2" class="project-card">
-    <img src="/assets/img/projects/project2.jpg" alt="Project 2" class="project-image">
-    <div class="project-info">
-      <h3 class="project-title">프로젝트 제목 2</h3>
-      <p class="project-description">
-        두 번째 프로젝트에 대한 설명입니다.
-        주요 특징과 사용된 기술을 간단히 설명합니다.
-      </p>
-      <div class="project-tags">
-        <span class="project-tag">JavaScript</span>
-        <span class="project-tag">React</span>
-      </div>
-    </div>
-  </a>
-</div>

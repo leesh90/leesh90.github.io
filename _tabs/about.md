@@ -98,7 +98,7 @@ order: 1
 [6]: /papers/Smart_SNS_Map.pdf
 [7]: /papers/Traffic_Classification_using_Deep_Learning.pdf
 [8]: /papers/Characteristics_and_Detection_of_Fraudulent_Crowdfunding_Campaigns.pdf
-[9]: /papers/Fraud_Detection_on_Crowdfunding_Platforms_Using_Multiple_Feature_Selection_Methods.pdf
+[9]: /papers/Fraud_Detection_IEEEAccess.pdf
 
 
 <!-- > 이것은 중요한 팁입니다!
