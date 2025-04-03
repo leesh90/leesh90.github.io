@@ -1,6 +1,6 @@
 ---
 title: Claude App에서 MCP(Model Context Protocol) 설정하기
-description: >--
+description: >-
   Claude App에서 MCP(Model Context Protocol)를 설정하는 기본적인 방법을 알아본다.
 author: seunghun
 date: 2025-04-03 13:00:00
