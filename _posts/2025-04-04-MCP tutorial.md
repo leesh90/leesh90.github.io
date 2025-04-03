@@ -23,20 +23,20 @@ MCP는 애플리케이션이 LLM에 컨텍스트를 제공하는 방식을 표�
 - Claude App 다운로드: <https://claude.ai/download>
 
 ### 2. MCP 서버 선택
-다음 사이트에서 사용할 MCP 서버를 선택할 수 있습니다:
+다음 사이트에서 사용할 MCP 서버를 선택할 수 있다:
 - <https://mcpservers.org/>
 - <https://www.pulsemcp.com/servers>
 - <https://smithery.ai/>
 
-이 예제에서는 Filesystem 서버를 사용하여 컴퓨터의 파일을 읽고 쓰는 방법을 알아보겠습니다.
+이 예제에서는 Filesystem 서버를 사용하여 컴퓨터의 파일을 읽고 쓰는 방법을 알아보자.
 
-1. Pulse 홈페이지에서 Filesystem 서버를 선택합니다.
+1. Pulse 홈페이지에서 Filesystem 서버를 선택한다.
 ![pulse_filesystem](/assets/img/posts/MCP/pulse_filesystem.png)
 
-2. npm 패키지 설정 방법을 선택합니다.
+2. npm 패키지 설정 방법을 선택한다.
 ![pulse_filesystem2](/assets/img/posts/MCP/pulse_filesystem2.png)
 
-3. NPX 코드를 복사합니다. 아래 코드는 지정된 경로에 대한 파일 읽기/쓰기 권한을 부여합니다:
+3. NPX 코드를 복사한다. 아래 코드는 지정된 경로에 대한 파일 읽기/쓰기 권한을 부여한다. 따라서, 나의 환경에 맞게 알맞은 폴더 경로를 지정해야 된다.
 ```json
 {
   "mcpServers": {
@@ -76,31 +76,39 @@ MCP는 애플리케이션이 LLM에 컨텍스트를 제공하는 방식을 표�
 2. [File] → [Setting] → [Developer] → [Edit Config] 클릭
 ![Claude_settings](/assets/img/posts/MCP/claude_settings.png)
 
-3. Claude APP 설치 폴더에서 **claude_desktop_config.json** 파일을 열고 복사한 NPX 코드를 붙여넣습니다.
+3. Claude APP 설치 폴더에서 **claude_desktop_config.json** 파일을 열고 복사한 NPX 코드를 붙여넣는다.
 ![Claude_folder](/assets/img/posts/MCP/claude_folder.png)
 ![claude_desktop_config](/assets/img/posts/MCP/claude_desktop_config.png)
 
-4. Claude APP을 재시작합니다.
+4. Claude APP을 재시작한다.
 
 ### 4. MCP 도구 확인
 
-재시작 후 망치 아이콘이 표시되며, 현재 11개의 MCP 도구를 사용할 수 있습니다.
+재시작 후 망치 아이콘이 표시되며, 현재 11개의 MCP 도구를 사용할 수 있다.
 ![claude](/assets/img/posts/MCP/claude.png)
 
-망치 아이콘을 클릭하면 사용 가능한 MCP 도구 목록을 확인할 수 있습니다:
+망치 아이콘을 클릭하면 사용 가능한 MCP 도구 목록을 확인할 수 있다:
 - create_directory: 디렉토리 생성
 - directory_tree: 디렉토리 구조 확인
 - edit_file: 파일 수정
-등의 파일 및 폴더 관련 작업을 수행할 수 있습니다.
+등의 파일 및 폴더 관련 작업을 수행할 수 있다.
 ![MCPtools](/assets/img/posts/MCP/MCPtools.png)
 
 ### 5. 파일 쓰기 예제
 
-1. MCP에 관한 설명을 다운로드 폴더에 MCP.txt라는 파일에다가 작성해달라고 요청한다.
-![prompt](/assets/img/posts/MCP/prompt.png)
-2. Claude가 MCP에 관한 설명을 다운로드 폴더에 작성하기 위해서 필요로 하는 MCP tools을 자동으로 선택하고, 해당하는 툴을 사용할 수 있게 권한 요청을 한다.
-![Request_use_tool](/assets/img/posts/MCP/Request_use_tool.png)
-3. 성공적으로 다운로드 폴더에 MCP.txt가 생기고 이 파일을 확인하면 MCP에 대한 설명이 적혀 있는 것을 확인 할 수 있다.
-![result1](/assets/img/posts/MCP/result1.png)
-![result2](/assets/img/posts/MCP/result2.png)
-![result3](/assets/img/posts/MCP/result3.png)
+MCP 도구를 사용하여 실제 파일을 생성하고 내용을 작성하는 예제를 살펴보자.
+
+1. **파일 생성 요청**
+   - 다운로드 폴더에 'MCP.txt' 파일을 생성하고 MCP에 대한 설명을 작성하도록 요청한다.
+   ![prompt](/assets/img/posts/MCP/prompt.png)
+
+2. **도구 권한 요청**
+   - Claude가 필요한 MCP 도구를 자동으로 선택하고 사용 권한을 요청한다.
+   ![Request_use_tool](/assets/img/posts/MCP/Request_use_tool.png)
+
+3. **결과 확인**
+   - 다운로드 폴더에 'MCP.txt' 파일이 생성됐다.
+   - 파일 내용을 확인하면 MCP에 대한 상세한 설명이 정상적으로 작성된 것을 확인할 수 있다.
+   ![result1](/assets/img/posts/MCP/result1.png)
+   ![result2](/assets/img/posts/MCP/result2.png)
+   ![result3](/assets/img/posts/MCP/result3.png)
