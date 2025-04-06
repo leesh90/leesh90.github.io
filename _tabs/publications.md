@@ -37,10 +37,22 @@ order: 3
     transform: translateY(-5px);
 }
 
+.publication-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+
 .publication-image-container {
     width: 100%;
     height: 200px;
     overflow: hidden;
+}
+
+.publication-image-container.half-width {
+    width: calc(50% - 10px);
+    min-width: 300px;
 }
 
 .publication-image {
@@ -50,7 +62,8 @@ order: 3
 }
 
 .publication-info {
-    padding: 15px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .publication-title-container {
@@ -137,25 +150,27 @@ order: 3
 <div class="publication-container">
   <!-- Traffic Classification Paper -->
   <div class="publication-card">
-    <div class="publication-image-container">
-      <img src="/assets/img/publications/Traffic_SIGCOMM.png" alt="Traffic Classification Paper" class="publication-image">
-    </div>
-    <div class="publication-info">
-      <div class="publication-title-container">
-        <h3 class="publication-title">Traffic Classification using Deep Learning: High Accuracy is Not Enough</h3>
-        <a href="/papers/Traffic_Classification_using_Deep_Learning.pdf" class="publication-button paper-button">Paper</a>
-        <a href="https://dl.acm.org/doi/10.1145/3405837.3411369" class="publication-button doi-button">DOI</a>
+    <div class="publication-content-wrapper">
+      <div class="publication-image-container half-width">
+        <img src="/assets/img/publications/Traffic_SIGCOMM.png" alt="Traffic Classification Paper" class="publication-image">
       </div>
-      <p class="publication-authors">Kanghee Lee, Seunghun Lee, and Hyun-chul Kim</p>
-      <p class="publication-venue">ACM SIGCOMM, New York City, Aug. 2020.(Poster)</p>
-      <div class="publication-abstract">
-        As Deep Learning (DL) algorithms have rapidly become a methodology of choice in various domains, they have recently entered also the field of the Internet traffic classification, successfully demonstrating impressive results. Most of the research work up to this point has focused on improving the accuracy of classification systems, yet there has been little attempt to provide (i) systematic comparison of the various DL algorithms used and (ii) analysis on where the higher accuracy come from, particularly when comparing with the traditional machine learning algorithms like C4.5. To fill this gap, we conduct experiments with four DL algorithms proposed for traffic classification, including CNN, LSTM, Stacked Auto-Encoder (SAE), and Hierarchical Attention Networks (HAN). Further, we propose to leverage and visualize hierarchical attention layers to highlight which parts of the traffic packet traces were most informative for accurate classification, which provides hints about why (and how) DL algorithms achieve the state-of-the-art level high accuracy. We view this paper as the first step towards answering the aforementioned ”why" question, which is critical in understanding the real benefit and contribution of deep learning to the field of the Internet traffic classification, and advancing its state-of-the-art.
-      </div>
-      <div class="publication-tags">
-        <span class="publication-tag">Deep Learning</span>
-        <span class="publication-tag">Network Traffic</span>
-        <span class="publication-tag">Traffic Classification</span>
-        <span class="publication-tag">Explainable AI</span>
+      <div class="publication-info">
+        <div class="publication-title-container">
+          <h3 class="publication-title">Traffic Classification using Deep Learning: High Accuracy is Not Enough</h3>
+          <a href="/papers/Traffic_Classification_using_Deep_Learning.pdf" class="publication-button paper-button">Paper</a>
+          <a href="https://dl.acm.org/doi/10.1145/3405837.3411369" class="publication-button doi-button">DOI</a>
+        </div>
+        <p class="publication-authors">Kanghee Lee, Seunghun Lee, and Hyun-chul Kim</p>
+        <p class="publication-venue">ACM SIGCOMM, New York City, Aug. 2020.(Poster)</p>
+        <div class="publication-abstract">
+          As Deep Learning (DL) algorithms have rapidly become a methodology of choice in various domains, they have recently entered also the field of the Internet traffic classification, successfully demonstrating impressive results. Most of the research work up to this point has focused on improving the accuracy of classification systems, yet there has been little attempt to provide (i) systematic comparison of the various DL algorithms used and (ii) analysis on where the higher accuracy come from, particularly when comparing with the traditional machine learning algorithms like C4.5. To fill this gap, we conduct experiments with four DL algorithms proposed for traffic classification, including CNN, LSTM, Stacked Auto-Encoder (SAE), and Hierarchical Attention Networks (HAN). Further, we propose to leverage and visualize hierarchical attention layers to highlight which parts of the traffic packet traces were most informative for accurate classification, which provides hints about why (and how) DL algorithms achieve the state-of-the-art level high accuracy. We view this paper as the first step towards answering the aforementioned "why" question, which is critical in understanding the real benefit and contribution of deep learning to the field of the Internet traffic classification, and advancing its state-of-the-art.
+        </div>
+        <div class="publication-tags">
+          <span class="publication-tag">Deep Learning</span>
+          <span class="publication-tag">Network Traffic</span>
+          <span class="publication-tag">Traffic Classification</span>
+          <span class="publication-tag">Explainable AI</span>
+        </div>
       </div>
     </div>
   </div>
