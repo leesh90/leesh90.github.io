@@ -48,10 +48,39 @@ order: 3
     flex-grow: 1;
 }
 
+.publication-title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
 .publication-title {
     font-size: 1.2rem;
-    margin: 0 0 10px 0;
+    margin: 0;
     color: var(--link-color);
+}
+
+.publication-button {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.paper-button {
+    background-color: var(--link-color);
+    color: white;
+}
+
+.doi-button {
+    background-color: #0070f3;
+    color: white;
+}
+
+.publication-button:hover {
+    opacity: 0.9;
 }
 
 .publication-authors {
@@ -91,17 +120,17 @@ order: 3
 
 <!-- Conference Section -->
 <h2 class="section-title">Conference</h2>
-<div class="publication-container">
+<div class="publication-container"></div>
   <!-- Traffic Classification Paper -->
-    <a href="/papers/Traffic_Classification_using_Deep_Learning.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/traffic_classification.jpg" alt="Traffic Classification Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">Traffic Classification using Deep Learning: High Accuracy is Not Enough</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">Traffic Classification using Deep Learning: High Accuracy is Not Enough</h3>
+        <a href="/papers/Traffic_Classification_using_Deep_Learning.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://dl.acm.org/doi/10.1145/3405837.3411369" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Kanghee Lee, Seunghun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">ACM SIGCOMM, New York City, Aug. 2020.(Poster)</p>
-      <!-- <p class="publication-description">
-        Deep learning approach for network traffic classification with focus on practical applicability and performance metrics beyond accuracy.
-      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Deep Learning</span>
         <span class="publication-tag">Network Traffic</span>
@@ -109,18 +138,18 @@ order: 3
         <span class="publication-tag">Explainable AI</span>
       </div>
     </div>
-  </a>
+  </div>
 
   <!-- Crowdfunding Success Prediction Paper -->
-  <a href="/papers/Content-based_Success_Prediction_of_Crowdfunding.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/crowdfunding_prediction.jpg" alt="Crowdfunding Prediction Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">Content-based Success Prediction of Crowdfunding Campaigns: A Deep Learning Approach</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">Content-based Success Prediction of Crowdfunding Campaigns: A Deep Learning Approach</h3>
+        <a href="/papers/Content-based_Success_Prediction_of_Crowdfunding.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://dl.acm.org/doi/10.1145/3272973.3274053" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Seunghun Lee, Kanghee Lee, and Hyun-chul Kim</p>
-      <p class="publication-venue">ACM CSCW, New York City’s Hudson River (Jersey City), Nov. 2018.(Poster)</p>
-      <!-- <p class="publication-description">
-        Novel deep learning methodology for predicting crowdfunding campaign success using content-based features.
-      </p> -->
+      <p class="publication-venue">ACM CSCW, New York City's Hudson River (Jersey City), Nov. 2018.(Poster)</p>
       <div class="publication-tags">
         <span class="publication-tag">Deep Learning</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -128,57 +157,57 @@ order: 3
         <span class="publication-tag">Hierarchical Attention Networks</span>
       </div>
     </div>
-  </a>
+  </div>
 
   <!-- Crowdfunding scam detection Paper -->
-  <a href="/papers/The_Language_of_Deceivers.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/crowdfunding_prediction.jpg" alt="Crowdfunding Prediction Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">The Language of Deceivers: Linguistic Features of Crowdfunding Scams</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">The Language of Deceivers: Linguistic Features of Crowdfunding Scams</h3>
+        <a href="/papers/The_Language_of_Deceivers.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://dl.acm.org/doi/10.1145/2872518.2889356" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Wafa Shafqat, Seunghun Lee, Sehrish Malik, and Hyun-chul Kim</p>
       <p class="publication-venue">International World Wide Web conference (WWW), Montreal, Canada, Apr. 2016.(Poster)</p>
-      <!-- <p class="publication-description">
-        Novel deep learning methodology for predicting crowdfunding campaign success using content-based features.
-      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Linguistic Analysis</span>
         <span class="publication-tag">Crowdfunding</span>
         <span class="publication-tag">Scam Detection</span>
       </div>
     </div>
-  </a>
+  </div>
 
   <!-- SNS Map Paper -->
-  <a href="/papers/SNSMap.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/crowdfunding_prediction.jpg" alt="Crowdfunding Prediction Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">SNS Map : Location-based SNS data mapping system</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">SNS Map : Location-based SNS data mapping system</h3>
+        <a href="/papers/SNSMap.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE06645952" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Seunghun Lee, Daeyoung Oh, Minhyuk Kang, and Hyun-chul kim</p>
       <p class="publication-venue">한국컴퓨터종합학술대회(In Proceedings of the Korea Computer Congress(KCC)), Jeju, Korea, June. 2015.</p>
-      <!-- <p class="publication-description">
-        Novel deep learning methodology for predicting crowdfunding campaign success using content-based features.
-      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Mapping System</span>
         <span class="publication-tag">Twitter</span>
       </div>
     </div>
-  </a>
+  </div>
 </div>
 
 <!-- Journal Section -->
 <h2 class="section-title">Journal</h2>
 <div class="publication-container">
   <!-- Fraud Detection IEEE Access Paper -->
-  <a href="/papers/Fraud_Detection_IEEEAccess.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/fraud_detection.jpg" alt="Fraud Detection Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods</h3>
+        <a href="/papers/Fraud_Detection_IEEEAccess.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://doi.org/10.1109/ACCESS.2025.3547396" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Seung-hun Lee, Heemin Park, and Hyun-chul Kim</p>
       <p class="publication-venue">IEEE Access, March 2025</p>
-      <!-- <p class="publication-description">
-        Comprehensive study on fraud detection in crowdfunding platforms using various feature selection methods and machine learning techniques.
-      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Fraud Detection</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -186,18 +215,18 @@ order: 3
         <span class="publication-tag">Linguistic Features</span>
       </div>
     </div>
-  </a>
+  </div>
 
   <!-- Fraud Detection MDPI Paper -->
-  <a href="/papers/Characteristics_and_Detection_of_Fraudulent_Crowdfunding_Campaigns.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/fraud_detection.jpg" alt="Fraud Detection Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">Backers Beware: Characteristics and Detection of Fraudulent Crowdfunding Campaigns</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">Backers Beware: Characteristics and Detection of Fraudulent Crowdfunding Campaigns</h3>
+        <a href="/papers/Characteristics_and_Detection_of_Fraudulent_Crowdfunding_Campaigns.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://doi.org/10.3390/s22197677" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Seung-hun Lee, Wafa Shafqat, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of MDPI Sensors, Volume 22, Number 19, pp. 7677, Oct. 2022.</p>
-      <!-- <p class="publication-description">
-        Comprehensive study on fraud detection in crowdfunding platforms using various feature selection methods and machine learning techniques.
-      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Fraud Detection</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -206,18 +235,18 @@ order: 3
         <span class="publication-tag">Linguistic Features</span>
       </div>
     </div>
-  </a>
+  </div>
 
   <!-- Scam Detection Paper -->
-  <a href="/papers/Crowdfunding_Scams.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/fraud_detection.jpg" alt="Fraud Detection Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">Crowdfunding Scams : The Profiles and Language of Deceivers</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">Crowdfunding Scams : The Profiles and Language of Deceivers</h3>
+        <a href="/papers/Crowdfunding_Scams.pdf" class="publication-button paper-button">Paper</a>
+        <a href="#" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Seung-hun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of The Korea Society of Computer and Information, Volume 23, Number 3, pp. 55-62, Mar. 2018.</p>
-      <!-- <p class="publication-description">
-        Comprehensive study on fraud detection in crowdfunding platforms using various feature selection methods and machine learning techniques.
-      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Fraud Detection</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -225,18 +254,18 @@ order: 3
         <span class="publication-tag">Linguistic cues</span>
       </div>
     </div>
-  </a>
+  </div>
 
   <!-- Success Prediction Paper -->
-  <a href="/papers/Predicting_Success_of_Crowdfunding_Campaigns.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/fraud_detection.jpg" alt="Fraud Detection Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">Predicting Success of Crowdfunding Campaigns using Multimedia and Linguistic Features</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">Predicting Success of Crowdfunding Campaigns using Multimedia and Linguistic Features</h3>
+        <a href="/papers/Predicting_Success_of_Crowdfunding_Campaigns.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://doi.org/10.9717/kmms.2018.21.2.281" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Kang-hee Lee, Seung-hun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of Korea Multimedia Society, Volume 21, Number 2, pp. 281-288, Feb. 2018.</p>
-      <!-- <p class="publication-description">
-        Comprehensive study on fraud detection in crowdfunding platforms using various feature selection methods and machine learning techniques.
-      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Success Prediction</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -245,18 +274,18 @@ order: 3
         <span class="publication-tag">Multimedia Features</span>
       </div>
     </div>
-  </a>
+  </div>
 
   <!-- Smart SNS Map paper -->
-  <a href="/papers/Predicting_Success_of_Crowdfunding_Campaigns.pdf" class="publication-card">
-    <!-- <img src="/assets/img/publications/fraud_detection.jpg" alt="Fraud Detection Paper" class="publication-image"> -->
+  <div class="publication-card">
     <div class="publication-info">
-      <h3 class="publication-title">Smart SNS Map: Location-based Social Network Service Data Mapping and Visualization System</h3>
+      <div class="publication-title-container">
+        <h3 class="publication-title">Smart SNS Map: Location-based Social Network Service Data Mapping and Visualization System</h3>
+        <a href="/papers/Predicting_Success_of_Crowdfunding_Campaigns.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://doi.org/10.9717/kmms.2016.19.2.428" class="publication-button doi-button">DOI</a>
+      </div>
       <p class="publication-authors">Jangho Yoon, Seung-hun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of Korea Multimedia Society, Volume 19, Number 2, pp. 428-435, Feb. 2016.</p>
-      <!-- <p class="publication-description">
-        Comprehensive study on fraud detection in crowdfunding platforms using various feature selection methods and machine learning techniques.
-      </p> -->
       <div class="publication-tags">
         <span class="publication-tag">Social Network Data Mapping</span>
         <span class="publication-tag">Location-based Visualization</span>
@@ -264,7 +293,7 @@ order: 3
         <span class="publication-tag">Twitter</span>
       </div>
     </div>
-  </a>
+  </div>
 </div>
 
 
