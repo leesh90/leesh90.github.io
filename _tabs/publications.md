@@ -119,17 +119,60 @@ order: 3
 }
 
 .publication-tags {
-    margin-top: 10px;
-    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
 }
 
 .publication-tag {
-    display: inline-block;
-    background: var(--tag-bg);
-    padding: 2px 8px;
-    margin-right: 5px;
-    border-radius: 4px;
-    color: var(--tag-color);
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.publication-tag:nth-child(1) {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.publication-tag:nth-child(2) {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.publication-tag:nth-child(3) {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.publication-tag:nth-child(4) {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+.publication-tag:nth-child(5) {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.publication-tag:nth-child(6) {
+    background-color: #e0f7fa;
+    color: #0097a7;
+}
+
+.publication-tag:nth-child(7) {
+    background-color: #f1f8e9;
+    color: #689f38;
+}
+
+.publication-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 </style>
 
