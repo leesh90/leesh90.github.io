@@ -13,6 +13,17 @@ order: 3
     color: var(--heading-color);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 10px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: var(--link-color);
 }
 
 .publication-container {
@@ -31,10 +42,23 @@ order: 3
     overflow: hidden;
     transition: transform 0.3s ease;
     background-color: var(--card-bg);
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .publication-card:hover {
     transform: translateY(-5px);
+}
+
+.publication-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
 }
 
 .publication-info {
@@ -174,6 +198,13 @@ order: 3
     transform: translateY(-2px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+    margin: 40px 0;
+}
 </style>
 
 <!-- Conference Section -->
@@ -214,6 +245,13 @@ order: 3
       </div>
       <p class="publication-authors">Seunghun Lee, Kanghee Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">ACM CSCW, New York City's Hudson River (Jersey City), Nov. 2018.(Poster)</p>
+      <div class="publication-abstract">
+        Despite the huge success of crowdfunding platforms, the average project success rate is 41%, and it has been decreasing. Hence, finding out the factors that lead to successful fundraising and predicting the probability of success for a project has been one of the most important challenges in the crowdfunding. This work is the first attempt to use in-band project content - text - data only, contained in all the Campaign, Updates, and Comments sections of a crowdfunding project (not in combination with any other out-of-band project metadata or statistically-derived numeric features), for success prediction. By adopting (i) the sequence to sequence (seq2seq) deep neural network model with sentence-level attention and (ii) Hierarchical Attention-based Network (HAN) model, we demonstrate that our proposed model achieves the state-of-the-art performance in predicting success of campaigns, as much as 89-91%. We also show that our method achieves 76% accuracy on average on the very first day of project launch, using campaign main text data only.
+      </div>
+      <div class="publication-image-container">
+        <!-- Add image here -->
+        <!-- <img src="/assets/img/publications/crowdfunding_prediction.jpg" alt="Crowdfunding Prediction Paper" class="publication-image"> -->
+      </div>
       <div class="publication-tags">
         <span class="publication-tag">Deep Learning</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -233,6 +271,13 @@ order: 3
       </div>
       <p class="publication-authors">Wafa Shafqat, Seunghun Lee, Sehrish Malik, and Hyun-chul Kim</p>
       <p class="publication-venue">International World Wide Web conference (WWW), Montreal, Canada, Apr. 2016.(Poster)</p>
+      <div class="publication-abstract">
+        Abstract placeholder for Language of Deceivers paper
+      </div>
+      <div class="publication-image-container">
+        <!-- Add image here -->
+        <!-- <img src="/assets/img/publications/scam_detection.jpg" alt="Scam Detection Paper" class="publication-image"> -->
+      </div>
       <div class="publication-tags">
         <span class="publication-tag">Linguistic Analysis</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -251,6 +296,13 @@ order: 3
       </div>
       <p class="publication-authors">Seunghun Lee, Daeyoung Oh, Minhyuk Kang, and Hyun-chul kim</p>
       <p class="publication-venue">한국컴퓨터종합학술대회(In Proceedings of the Korea Computer Congress(KCC)), Jeju, Korea, June. 2015.</p>
+      <div class="publication-abstract">
+        Abstract placeholder for SNS Map paper
+      </div>
+      <div class="publication-image-container">
+        <!-- Add image here -->
+        <!-- <img src="/assets/img/publications/sns_map.jpg" alt="SNS Map Paper" class="publication-image"> -->
+      </div>
       <div class="publication-tags">
         <span class="publication-tag">Mapping System</span>
         <span class="publication-tag">Twitter</span>
@@ -258,6 +310,8 @@ order: 3
     </div>
   </div>
 </div>
+
+<div class="section-divider"></div>
 
 <!-- Journal Section -->
 <h2 class="section-title">Journal</h2>
@@ -272,6 +326,13 @@ order: 3
       </div>
       <p class="publication-authors">Seung-hun Lee, Heemin Park, and Hyun-chul Kim</p>
       <p class="publication-venue">IEEE Access, March 2025</p>
+      <div class="publication-abstract">
+        Abstract placeholder for IEEE Access Fraud Detection paper
+      </div>
+      <div class="publication-image-container">
+        <!-- Add image here -->
+        <!-- <img src="/assets/img/publications/ieee_fraud.jpg" alt="IEEE Fraud Detection Paper" class="publication-image"> -->
+      </div>
       <div class="publication-tags">
         <span class="publication-tag">Fraud Detection</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -291,6 +352,13 @@ order: 3
       </div>
       <p class="publication-authors">Seung-hun Lee, Wafa Shafqat, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of MDPI Sensors, Volume 22, Number 19, pp. 7677, Oct. 2022.</p>
+      <div class="publication-abstract">
+        Abstract placeholder for MDPI Fraud Detection paper
+      </div>
+      <div class="publication-image-container">
+        <!-- Add image here -->
+        <!-- <img src="/assets/img/publications/mdpi_fraud.jpg" alt="MDPI Fraud Detection Paper" class="publication-image"> -->
+      </div>
       <div class="publication-tags">
         <span class="publication-tag">Fraud Detection</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -311,6 +379,13 @@ order: 3
       </div>
       <p class="publication-authors">Seung-hun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of The Korea Society of Computer and Information, Volume 23, Number 3, pp. 55-62, Mar. 2018.</p>
+      <div class="publication-abstract">
+        Abstract placeholder for Crowdfunding Scams paper
+      </div>
+      <div class="publication-image-container">
+        <!-- Add image here -->
+        <!-- <img src="/assets/img/publications/scam_profiles.jpg" alt="Scam Profiles Paper" class="publication-image"> -->
+      </div>
       <div class="publication-tags">
         <span class="publication-tag">Fraud Detection</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -330,6 +405,13 @@ order: 3
       </div>
       <p class="publication-authors">Kang-hee Lee, Seung-hun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of Korea Multimedia Society, Volume 21, Number 2, pp. 281-288, Feb. 2018.</p>
+      <div class="publication-abstract">
+        Abstract placeholder for Success Prediction paper
+      </div>
+      <div class="publication-image-container">
+        <!-- Add image here -->
+        <!-- <img src="/assets/img/publications/success_prediction.jpg" alt="Success Prediction Paper" class="publication-image"> -->
+      </div>
       <div class="publication-tags">
         <span class="publication-tag">Success Prediction</span>
         <span class="publication-tag">Crowdfunding</span>
@@ -350,6 +432,13 @@ order: 3
       </div>
       <p class="publication-authors">Jangho Yoon, Seung-hun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of Korea Multimedia Society, Volume 19, Number 2, pp. 428-435, Feb. 2016.</p>
+      <div class="publication-abstract">
+        Abstract placeholder for Smart SNS Map paper
+      </div>
+      <div class="publication-image-container">
+        <!-- Add image here -->
+        <!-- <img src="/assets/img/publications/smart_sns.jpg" alt="Smart SNS Map Paper" class="publication-image"> -->
+      </div>
       <div class="publication-tags">
         <span class="publication-tag">Social Network Data Mapping</span>
         <span class="publication-tag">Location-based Visualization</span>
