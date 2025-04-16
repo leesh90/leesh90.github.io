@@ -3,7 +3,7 @@ title: Claude 앱에 Perplexity MCP 서버 구축하기
 description: >-
   Claude 애플리케이션에 Perplexity MCP 서버를 연동하는 방법
 author: seunghun
-date: 2025-04-17 22:00:00 +0800
+date: 2025-04-16 22:00:00 +0800
 categories: [AI, Development]
 tags: [Claude, Perplexity, MCP, AI, Tutorial]
 ---
