@@ -15,6 +15,9 @@ tags: [Claude, Perplexity, MCP, AI, Tutorial]
 
 Perplexity MCP 서버를 통해 Claude는 실시간 웹 검색 기능을 활용할 수 있게 되어, 최신 정보에 기반한 응답을 제공할 수 있다. 이 글에서는 Perplexity MCP 서버 설정에 초점을 맞추어 설명한다.
 
+공식적인 가이드는 아래 링크에서 확인 할 수 있다. 
+- [Integrating MCP with Perplexity's Sonar API](https://docs.perplexity.ai/guides/mcp-server)
+
 ## Perplexity 사용의 장점
 
 Perplexity MCP 서버를 Claude와 통합하면 다음과 같은 주요 장점들이 있습니다:
