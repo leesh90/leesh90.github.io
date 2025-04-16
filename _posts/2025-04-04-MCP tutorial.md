@@ -112,3 +112,17 @@ MCP 도구를 사용하여 실제 파일을 생성하고 내용을 작성하는 
    ![result1](/assets/img/posts/MCP/result1.png)
    ![result2](/assets/img/posts/MCP/result2.png)
    ![result3](/assets/img/posts/MCP/result3.png)
+
+
+## MCP 서버 보안 주의사항
+
+MCP 서버를 사용할 때는 보안에 특별히 주의해야 한다:
+
+1. **보안 위험성**
+   - 무분별하거나 인증되지 않은 MCP 서버를 사용할 경우 보안 위협이 발생할 수 있다.
+   - MCP 서버 코드에 악성 코드가 숨겨져 있을 경우 시스템이 쉽게 해킹될 수 있다.
+
+2. **안전한 MCP 서버 선택 방법**
+   - MCP 서버를 공식적으로 제공하는 제공자의 서버를 사용한다.
+   - 믿을 수 있는 곳에서 배포하는 MCP 서버를 선택한다.
+   - Pulse MCP와 같은 플랫폼에서는 "Official Providers" 인증 마크가 있는 서버를 우선적으로 고려한다.

@@ -6,7 +6,7 @@ description: >-
 author: seunghun
 date: 2025-04-06 12:00:00 +0800
 categories: [Data Science, Web Crawling]
-tags: [crawling, data collection, static]
+tags: [Crawling, Data Collection, Static]
 ---
 
 ## 웹 크롤링이란?
@@ -96,6 +96,7 @@ user_agents = [
 headers = {'User-Agent': random.choice(user_agents)}
 ```
 
+작성 중~~~~
 
 
 <!-- 
