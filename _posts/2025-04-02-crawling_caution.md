@@ -5,7 +5,7 @@ description: >-
 author: seunghun
 date: 2025-04-02 08:00:00 +0800
 categories: [Data Science, Web Crawling]
-tags: [crawling, data collection, ethics, legal]
+tags: [crawling, data-collection, ethics, legal]
 ---
 
 ## 웹 크롤링 시 주의사항

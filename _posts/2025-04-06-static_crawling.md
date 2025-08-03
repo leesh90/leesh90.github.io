@@ -6,7 +6,7 @@ description: >-
 author: seunghun
 date: 2025-04-06 12:00:00 +0800
 categories: [Data Science, Web Crawling]
-tags: [Crawling, Data Collection, Static]
+tags: [crawling, data-collection, static]
 ---
 
 ## 웹 크롤링이란?

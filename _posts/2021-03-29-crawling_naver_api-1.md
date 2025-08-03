@@ -6,7 +6,7 @@ description: >-
 author: seunghun
 date: 2021-03-29 08:00:00 +0800
 categories: [Data Science, Web Crawling]
-tags: [crawling, data collection, naver api]
+tags: [crawling, data-collection, naver-api]
 ---
 
 ## 1. 네이버 개발자 API 가입 & 이용 신청
