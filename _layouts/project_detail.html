@@ -92,14 +92,7 @@ layout: page
     {{ content }}
   </div>
 
-  {% if page.tags %}
-  <div class="project-detail-tags">
-    <h4>Technologies Used</h4>
-    {% for tag in page.tags %}
-      <span class="project-tag">{{ tag }}</span>
-    {% endfor %}
-  </div>
-  {% endif %}
+  
 
   {% if page.links %}
   <div class="project-detail-links">
