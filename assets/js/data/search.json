@@ -13,8 +13,8 @@ swcache: true
     "url": {{ post.url | relative_url | jsonify }},
     "categories": {{ post.categories | join: ', ' | jsonify }},
     "tags": {{ post.tags | join: ', ' | jsonify }},
-    "date": "{{ post.date }}",
-    "content": "{{ description }}"
+    "date": {{ post.date | jsonify }},
+    "content": {% include post-description.html json=true %}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

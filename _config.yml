@@ -212,7 +212,7 @@ exclude:
   - README.md
   - LICENSE
   - purgecss.js
-  - rollup.config.js
+  - "*.config.js"
   - "package*.json"
   - "_site/about/index.html"  # 링크 검사 대상 파일 제외
 
