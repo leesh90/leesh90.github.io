@@ -216,11 +216,6 @@ order: 2
 .lightbox-close:hover {
   color: #ccc;
 }
-
-.lightbox-image-wrapper {
-  display: inline-block;
-  line-height: 0;
-}
 </style>
 
 <div class="project-container">
@@ -266,9 +261,7 @@ order: 2
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
   <div class="lightbox-content" onclick="event.stopPropagation()">
-    <div class="lightbox-image-wrapper">
-      <img id="lightbox-image" class="lightbox-image" src="" alt="">
-    </div>
+    <img id="lightbox-image" class="lightbox-image" src="" alt="" data-no-link="true">
   </div>
 </div>
 
