@@ -261,7 +261,7 @@ order: 2
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
   <div class="lightbox-content" onclick="event.stopPropagation()">
-    <img id="lightbox-image" class="lightbox-image" src="" alt="">
+    <img id="lightbox-image" class="lightbox-image no-link" src="" alt="">
   </div>
 </div>
 
