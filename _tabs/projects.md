@@ -83,17 +83,44 @@ order: 2
     color: var(--tag-color);
     font-weight: 500;
 }
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
 </style>
 
 <div class="project-container">
   {% assign sorted_projects = site.projects | sort: "start_date" | reverse %}
   {% for project in sorted_projects %}
     <div class="project-card">
-      <div class="project-image-container">
-        {% if project.image %}
-          <img src="{{ project.image }}" alt="{{ project.title }}" class="project-image">
-        {% endif %}
-      </div>
       <div class="project-info">
         <h3 class="project-title">
           {{ project.title }}
@@ -105,6 +132,20 @@ order: 2
             {{ project.date | date: "%B %d, %Y" }}
           {% endif %}
         </p>
+
+        {% if project.buttons %}
+        <div style="text-align: center; margin-bottom: 10px;">
+          {% for button in project.buttons %}
+          <button class="btn btn-primary" onclick="toggleProjectImage('{{ project.title | slugify }}-{{ forloop.index }}')">{{ button.text }}</button>
+          {% endfor %}
+        </div>
+        {% for button in project.buttons %}
+        <div id="image-{{ project.title | slugify }}-{{ forloop.index }}" style="display: none; text-align: center; margin-bottom: 10px;">
+          <img src="{{ button.image }}" alt="{{ button.text }}" style="max-width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        {% endfor %}
+        {% endif %}
+
         <p class="project-description">
           {{ project.description }}
         </p>
@@ -119,3 +160,14 @@ order: 2
     </div>
   {% endfor %}
 </div>
+
+<script>
+  function toggleProjectImage(projectId) {
+    var imageContainer = document.getElementById('image-' + projectId);
+    if (imageContainer.style.display === 'none') {
+      imageContainer.style.display = 'block';
+    } else {
+      imageContainer.style.display = 'none';
+    }
+  }
+</script>
