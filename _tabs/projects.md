@@ -265,38 +265,36 @@ order: 2
   </div>
 </div>
 
-<script>
-  function openLightbox(imageSrc, altText) {
-    var lightbox = document.getElementById('lightbox');
-    var lightboxImage = document.getElementById('lightbox-image');
-    
-    console.log('Loading image:', imageSrc); // 디버깅용
-    lightboxImage.src = imageSrc;
-    lightboxImage.alt = altText;
-    lightbox.style.display = 'block';
-    
-    // 이미지 로드 에러 처리
-    lightboxImage.onerror = function() {
-      console.error('Failed to load image:', imageSrc);
-    };
-    
-    // ESC 키로 닫기 기능
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    });
-  }
+<script type="text/javascript">
+function openLightbox(imageSrc, altText) {
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImage = document.getElementById('lightbox-image');
   
-  function closeLightbox() {
-    var lightbox = document.getElementById('lightbox');
-    lightbox.style.display = 'none';
-    
-    // 이벤트 리스너 제거
-    document.removeEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    });
+  console.log('Loading image:', imageSrc);
+  lightboxImage.src = imageSrc;
+  lightboxImage.alt = altText;
+  lightbox.style.display = 'block';
+  
+  lightboxImage.onerror = function() {
+    console.error('Failed to load image:', imageSrc);
+  };
+  
+  var escapeHandler = function(e) {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  };
+  document.addEventListener('keydown', escapeHandler);
+  lightbox.escapeHandler = escapeHandler;
+}
+
+function closeLightbox() {
+  var lightbox = document.getElementById('lightbox');
+  lightbox.style.display = 'none';
+  
+  if (lightbox.escapeHandler) {
+    document.removeEventListener('keydown', lightbox.escapeHandler);
+    lightbox.escapeHandler = null;
   }
+}
 </script>
