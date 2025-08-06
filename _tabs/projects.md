@@ -115,6 +115,107 @@ order: 2
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
+
+/* 프로젝트 버튼을 키워드 태그 스타일로 변경 */
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.project-button:nth-child(1) {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.project-button:nth-child(2) {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.project-button:nth-child(3) {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.project-button:nth-child(4) {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.project-button:nth-child(5) {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+.project-button:nth-child(6) {
+  background-color: #e0f7fa;
+  color: #0097a7;
+}
+
+.project-button:nth-child(7) {
+  background-color: #f1f8e9;
+  color: #689f38;
+}
+
+.project-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 라이트박스 스타일 */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.lightbox-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  cursor: default;
+}
+
+.lightbox-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.lightbox-close:hover {
+  color: #ccc;
+}
 </style>
 
 <div class="project-container">
@@ -134,16 +235,11 @@ order: 2
         </p>
 
         {% if project.buttons %}
-        <div style="text-align: center; margin-bottom: 10px;">
+        <div style="text-align: left; margin-bottom: 10px;">
           {% for button in project.buttons %}
-          <button class="btn btn-primary" onclick="toggleProjectImage('{{ project.title | slugify }}-{{ forloop.index }}')">{{ button.text }}</button>
+          <button class="project-button" onclick="openLightbox('{{ button.image }}', '{{ button.text }}')">{{ button.text }}</button>
           {% endfor %}
         </div>
-        {% for button in project.buttons %}
-        <div id="image-{{ project.title | slugify }}-{{ forloop.index }}" style="display: none; text-align: center; margin-bottom: 10px;">
-          <img src="{{ button.image }}" alt="{{ button.text }}" style="max-width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        {% endfor %}
         {% endif %}
 
         <p class="project-description">
@@ -161,13 +257,40 @@ order: 2
   {% endfor %}
 </div>
 
+<!-- 라이트박스 HTML 구조 -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <img id="lightbox-image" class="lightbox-image" src="" alt="">
+  </div>
+</div>
+
 <script>
-  function toggleProjectImage(projectId) {
-    var imageContainer = document.getElementById('image-' + projectId);
-    if (imageContainer.style.display === 'none') {
-      imageContainer.style.display = 'block';
-    } else {
-      imageContainer.style.display = 'none';
-    }
+  function openLightbox(imageSrc, altText) {
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImage = document.getElementById('lightbox-image');
+    
+    lightboxImage.src = imageSrc;
+    lightboxImage.alt = altText;
+    lightbox.style.display = 'block';
+    
+    // ESC 키로 닫기 기능
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  }
+  
+  function closeLightbox() {
+    var lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+    
+    // 이벤트 리스너 제거
+    document.removeEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
   }
 </script>
