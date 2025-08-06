@@ -237,7 +237,7 @@ order: 2
         {% if project.buttons %}
         <div style="text-align: left; margin-bottom: 10px;">
           {% for button in project.buttons %}
-          <button class="project-button" onclick="openLightbox('{{ button.image }}', '{{ button.text }}')">{{ button.text }}</button>
+          <button class="project-button" onclick="openLightbox('{{ site.baseurl }}{{ button.image }}', '{{ button.text }}')">{{ button.text }}</button>
           {% endfor %}
         </div>
         {% endif %}
@@ -270,9 +270,15 @@ order: 2
     var lightbox = document.getElementById('lightbox');
     var lightboxImage = document.getElementById('lightbox-image');
     
+    console.log('Loading image:', imageSrc); // 디버깅용
     lightboxImage.src = imageSrc;
     lightboxImage.alt = altText;
     lightbox.style.display = 'block';
+    
+    // 이미지 로드 에러 처리
+    lightboxImage.onerror = function() {
+      console.error('Failed to load image:', imageSrc);
+    };
     
     // ESC 키로 닫기 기능
     document.addEventListener('keydown', function(e) {
