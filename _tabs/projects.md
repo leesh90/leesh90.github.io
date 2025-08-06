@@ -88,7 +88,7 @@ order: 2
 <div class="project-container">
   {% assign sorted_projects = site.projects | sort: "start_date" | reverse %}
   {% for project in sorted_projects %}
-    <div class="project-card" onclick="window.location.href='{{ project.url | relative_url }}';">
+    <div class="project-card">
       <div class="project-image-container">
         {% if project.image %}
           <img src="{{ project.image }}" alt="{{ project.title }}" class="project-image">

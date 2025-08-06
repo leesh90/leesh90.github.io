@@ -75,13 +75,16 @@ layout: page
 <div class="project-detail-container">
   <header class="project-detail-header">
     <h1 class="project-detail-title">{{ page.title }}</h1>
-    <p class="text-muted">
+    <div class="project-meta">
       {% if page.start_date %}
-        {{ page.start_date | date: "%Y-%m-%d" }} ~ {{ page.end_date | date: "%Y-%m-%d" }}
+        <p class="text-muted"><span>Duration: {{ page.start_date | date: "%Y-%m-%d" }} ~ {{ page.end_date | date: "%Y-%m-%d" }}</span></p>
       {% else %}
-        {{ page.date | date: "%B %d, %Y" }}
+        <p class="text-muted"><span>Date: {{ page.date | date: "%B %d, %Y" }}</span></p>
       {% endif %}
-    </p>
+      {% if page.sponsor %}
+        <p class="text-muted"><span>Sponsor: {{ page.sponsor }}</span></p>
+      {% endif %}
+    </div>
   </header>
 
   {% if page.image %}
