@@ -70,9 +70,9 @@ order: 1
   (sponsored by National Security Research Institute, Korea) 2023.04~2023.10
 - Deep Learning based Internet Traffic Classification: Myths, Realities, and their Explainabilities <br>
  (sponsored by the National Research Foundation, Korea) 2022.06 ~ 2023.05
-- Multi-modal data-driven Explainable AI systems and the Future of Digital Finance <br>
+- Multi-modal data-driven Explainable AI Systems and the Future of Digital Finance <br>
  (sponsored by the National Research Foundataion, Korea) 2019.09 ~ 2022.02
-- Towards Explainable AI in Next-Generation Intrusion Detection systems <br>
+- Towards Explainable AI in Next-Generation Intrusion Detection Systems <br>
  (sponsored by National Security Research Institute, Korea) 2019.04~2019.10
 - Statistics-based Network Behavior Modeling <br>
  (sponsored by National Security Research Institute, Korea) 2018.05 ~ 2018.10
