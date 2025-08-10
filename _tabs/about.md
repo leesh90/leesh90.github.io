@@ -88,9 +88,9 @@ order: 1
 
 ## Education
 
-- Ph.D Dept. of Computer Software, Sangmyung (2018.3 ~)
-- M.S Dept. of Computer Science and Engineering, Sangmyung. (2015.3 ~ 2017.2)
-- B.S Dept. of Computer Science and Engineering, Sangmyung. (2009.3 ~ 2015.)
+- Ph.D Dept. of Computer Software Engineering, Sangmyung (2018.3 ~)
+- M.S Dept. of Computer Software Engineering, Sangmyung. (2015.3 ~ 2017.2)
+- B.S Dept. of Computer Software Engineering, Sangmyung. (2009.3 ~ 2015.)
 
 [1]: /papers/Content-based_Success_Prediction_of_Crowdfunding.pdf
 [2]: /papers/The_Language_of_Deceivers.pdf
