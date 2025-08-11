@@ -10,6 +10,14 @@
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
+- type: facebook
+  icon: "fab fa-facebook"
+
+- type: cv
+  icon: "fas fa-file-alt"
+  url: "/assets/files/Seunghun_CV.pdf"
+  noblank: true # open link in current tab
+
 - type: rss
   icon: "fas fa-rss"
   noblank: true
