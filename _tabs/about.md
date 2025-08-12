@@ -13,7 +13,7 @@ order: 1
 **Email: mr.leesh90@gmail.com**<br>
 
 <div class="cv-download mb-4 mt-3">
-  <a href="/assets/files/SeungHun_CV.pdf" target="_blank" class="btn btn-outline-primary">
+  <a href="/assets/files/Seunghun_CV.pdf" target="_blank" class="btn btn-outline-primary">
     <i class="fas fa-download me-2"></i>Curriculum Vitae
   </a>
 </div>
