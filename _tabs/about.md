@@ -25,7 +25,7 @@ order: 1
 - Network Traffic Classification
 - Data Mining, Machine Learning, Deep Learning
 - Explainable AI
-- NLP(Natural Language Processing)
+- NLP (Natural Language Processing)
 - Large Language Model(LLM)
 
 ## Publications
