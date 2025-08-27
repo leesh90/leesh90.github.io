@@ -175,6 +175,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  feeds:
+    output: false
+    sort_by: date
 
 defaults:
   - scope:
@@ -238,3 +241,4 @@ plugins:
 feed:
   posts_limit: 20
   excerpt_only: false
+  path: feed.xml

@@ -18,6 +18,7 @@ tabs:
   blog: Blog
   projects: Projects
   publications: Publications
+  feed: Social Feed
 # the text displayed in the search bar & search results
 search:
   hint: search
