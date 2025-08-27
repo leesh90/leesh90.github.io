@@ -233,6 +233,7 @@ jekyll-archives:
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 feed:
   posts_limit: 20
