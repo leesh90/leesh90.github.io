@@ -15,12 +15,12 @@
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
     margin-bottom: 1.5rem;
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
     }
 
     .my-comment {
@@ -67,7 +67,7 @@
         width: 100%;
         max-width: 100%;
         border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
       }
     }
 
@@ -168,25 +168,23 @@
         }
       }
     }
-  }
-}
 
-// Platform-specific colors
-.social-feed-container .feed-item {
-  .feed-source i.fa-twitter {
-    color: #1da1f2;
-  }
+    // Platform-specific colors
+    .feed-source i.fa-twitter {
+      color: #1da1f2;
+    }
 
-  .feed-source i.fa-facebook {
-    color: #1877f2;
-  }
+    .feed-source i.fa-facebook {
+      color: #1877f2;
+    }
 
-  .feed-source i.fa-instagram {
-    color: #e4405f;
-  }
+    .feed-source i.fa-instagram {
+      color: #e4405f;
+    }
 
-  .feed-source i.fa-linkedin {
-    color: #0077b5;
+    .feed-source i.fa-linkedin {
+      color: #0077b5;
+    }
   }
 }
 
