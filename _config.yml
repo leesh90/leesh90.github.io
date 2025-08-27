@@ -230,3 +230,10 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+plugins:
+  - jekyll-feed
+
+feed:
+  posts_limit: 20
+  excerpt_only: false
