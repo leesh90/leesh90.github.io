@@ -21,19 +21,22 @@ order: 1
 ## Research Interests
 
 - Social Networking Service
+- Multi-modal Data Analysis
 - Crowdfunding Scam(Deception, Fraud) Detection, Success Prediction
 - Network Traffic Classification
 - Data Mining, Machine Learning, Deep Learning
 - Explainable AI
 - NLP (Natural Language Processing)
-- Large Language Model(LLM)
+- Large Language Models(LLMs)
+- Graph Neural Networks(GNNs)
+- Agent AI / Multi-Agent Systems
 
 ## Publications
 ### Conferences
 - [Traffic Classification using Deep Learning: High Accuracy is Not Enough][7]<br>
  Kanghee Lee, Seunghun Lee, and Hyun-chul Kim<br>
  ACM SIGCOMM, New York City, Aug. 2020.(Poster)
-	
+
 - [Content-based Success Prediction of Crowdfunding Campaigns: A Deep Learning Approach][1]<br>
  Seunghun Lee, Kanghee Lee, and Hyun-chul Kim<br>
  ACM CSCW, New York City's Hudson River (Jersey City), Nov. 2018.(Poster)
@@ -46,27 +49,30 @@ order: 1
  Seunghun Lee, Daeyoung Oh, Minhyuk Kang, and Hyun-chul kim<br>
  한국컴퓨터종합학술대회(In Proceedings of the Korea Computer Congress(KCC)), Jeju, Korea, June. 2015.
 
-
 ### Journal
 
+- [Explainable Prediction of Crowdfunding Success Using Hierarchical Attention Network][10]<br>
+ Seunghun Lee, Muneeb A. Khan, and Hyun-chul Kim<br>
+ Journal of MDPI Electronics, Volume 12, Number 3, pp. 570
+
 - [Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods][9]<br>
- Seung-hun Lee, Heemin Park, and Hyun-chul Kim<br>
+ Seunghun Lee, Heemin Park, and Hyun-chul Kim<br>
  IEEE Access,  Mar. 2025.
 
 - [Backers Beware: Characteristics and Detection of Fraudulent Crowdfunding Campaigns][8]<br>
- Seung-hun Lee, Wafa Shafqat, and Hyun-chul Kim<br>
+ Seunghun Lee, Wafa Shafqat, and Hyun-chul Kim<br>
  Journal of MDPI Sensors, Volume 22, Number 19, pp. 7677, Oct. 2022.
 
 - [Crowdfunding Scams : The Profiles and Language of Deceivers][4]<br>
- Seung-hun Lee, and Hyun-chul Kim<br>
+ Seunghun Lee, and Hyun-chul Kim<br>
  Journal of The Korea Society of Computer and Information, Volume 23, Number 3, pp. 55-62, Mar. 2018.
 
 - [Predicting Success of Crowdfunding Campaigns using Multimedia and Linguistic Features][5]<br>
- Kang-hee Lee, Seung-hun Lee, and Hyun-chul Kim<br>
+ Kang-hee Lee, Seunghun Lee, and Hyun-chul Kim<br>
  Journal of Korea Multimedia Society, Volume 21, Number 2, pp. 281-288, Feb. 2018.
 
 - [Smart SNS Map: Location-based Social Network Service Data Mapping and Visualization System][6]<br>
- Jangho Yoon, Seung-hun Lee, and Hyun-chul Kim<br>
+ Jangho Yoon, Seunghun Lee, and Hyun-chul Kim<br>
  Journal of Korea Multimedia Society, Volume 19, Number 2, pp. 428-435, Feb. 2016.<br><br>
 
 ## Projects
@@ -107,6 +113,7 @@ order: 1
 [7]: /papers/Traffic_Classification_using_Deep_Learning.pdf
 [8]: /papers/Characteristics_and_Detection_of_Fraudulent_Crowdfunding_Campaigns.pdf
 [9]: /papers/Fraud_Detection_IEEEAccess.pdf
+[10]: /papers/Explainable_Prediction_of_Crowdfunding_Success.pdf
 
 
 <!-- > 이것은 중요한 팁입니다!
