@@ -301,6 +301,29 @@ order: 3
 <!-- Journal Section -->
 <h2 class="section-title">Journal</h2>
 <div class="publication-container">
+  <!-- Success Predicion MDPI Electronics Paper -->
+  <div class="publication-card">
+    <div class="publication-info">
+      <div class="publication-title-container">
+        <h3 class="publication-title">Explainable Prediction of Crowdfunding Success Using Hierarchical Attention Network</h3>
+        <a href="/papers/Explainable_Prediction_of_Crowdfunding_Success.pdf" class="publication-button paper-button">Paper</a>
+        <a href="https://doi.org/10.3390/electronics15030570" class="publication-button doi-button">DOI</a>
+      </div>
+      <p class="publication-authors">Seunghun Lee, Muneeb A. Khan, and Hyun-chul Kim</p>
+      <p class="publication-venue">MDPI Electronics, January 2026</p>
+      <div class="publication-abstract">
+        Crowdfunding has emerged as an alternative funding source among entrepreneurs, businesses, and industries. In recent years, research on machine learning-based project classification models has been conducted with the aim of predicting the success of crowdfunding campaigns, both for entrepreneurs and investors. However, most of the research has focused on classification approaches using non-content information such as project metadata, creators’ behavior, and social history, but there have been few attempts to use text content data per se, particularly in order to provide explanations and evidence for how the prediction decisions were made. To address this point, we propose to use a deep learning-based approach called Hierarchical Attention Network (HAN) to predict the success of crowdfunding campaigns and provide explanation and justification of the prediction decisions using attention weights. We collect publicly available data of crowdfunding campaigns and build our success prediction model with an accuracy of 86.38% and 87.29%, using an Updates section and backers’ comments in a Comments section, respectively. We also explore the feasibility of early success prediction during the funding period (up to 2 months), with as much as 80.99% accuracy in 1 to 2 months. Finally, we examine word and sentence attention weight scores to clarify key factors in predicting crowdfunding success.
+      </div>
+      <div class="publication-tags">
+        <span class="publication-tag">Success Prediction</span>
+        <span class="publication-tag">Crowdfunding</span>
+        <span class="publication-tag">Deep Learning Approach</span>
+        <span class="publication-tag">Hierarchical Attention Network</span>
+        <span class="publication-tag">Explainable AI</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Fraud Detection IEEE Access Paper -->
   <div class="publication-card">
     <div class="publication-info">
@@ -309,7 +332,7 @@ order: 3
         <a href="/papers/Fraud_Detection_IEEEAccess.pdf" class="publication-button paper-button">Paper</a>
         <a href="https://doi.org/10.1109/ACCESS.2025.3547396" class="publication-button doi-button">DOI</a>
       </div>
-      <p class="publication-authors">Seung-hun Lee, Heemin Park, and Hyun-chul Kim</p>
+      <p class="publication-authors">Seunghun Lee, Heemin Park, and Hyun-chul Kim</p>
       <p class="publication-venue">IEEE Access, March 2025</p>
       <div class="publication-abstract">
         In recent years, crowdfunding has emerged as an alternative funding source for startups and emerging businesses, experiencing significant growth. However, this growth has also led to an increase in fraudulent activities. Despite the potential for fraud in the realm of crowdfunding, there is limited knowledge of the phenomenon due to a lack of data on actual instances of fraudulent campaigns. In this paper, we aim to address this deficiency by collecting and analyzing publicly accessible web and social media data from a hundred fraudulent crowdfunding projects. In order to identify and comprehend the distinguishing characteristics of fraudulent campaigns, we first propose 1) using a wide variety of characteristics of campaign projects and project creators, including their profiles, behavior, social traits, and language; then, 2) we propose to use and combine three well-known multiple feature selection methods, which are based on Correlation-based Feature Selection (CFS), Pearson Correlation Coefficient (PCC), and Information Gain (IG), to identify representative features of fraudulent campaigns. Our approach identifies 10 commonly selected key features of fraudulent crowdfunding campaigns, three of which are new, original findings. We provide and discuss our findings and interpretations on the 10 commonly selected key features in relation to previous studies, based on which we construct a fraud detection model with 82.04% accuracy. We also employ Shapley Additive ExPlanations (SHAP) to interpret the fraud detection model, explaining the importance of each feature.
@@ -331,7 +354,7 @@ order: 3
         <a href="/papers/Characteristics_and_Detection_of_Fraudulent_Crowdfunding_Campaigns.pdf" class="publication-button paper-button">Paper</a>
         <a href="https://doi.org/10.3390/s22197677" class="publication-button doi-button">DOI</a>
       </div>
-      <p class="publication-authors">Seung-hun Lee, Wafa Shafqat, and Hyun-chul Kim</p>
+      <p class="publication-authors">Seunghun Lee, Wafa Shafqat, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of MDPI Sensors, Volume 22, Number 19, pp. 7677, Oct. 2022.</p>
       <div class="publication-abstract">
         Crowdfunding has seen an enormous rise, becoming a new alternative funding source for emerging companies or new startups in recent years. As crowdfunding prevails, it is also under substantial risk of the occurrence of fraud. Though a growing number of articles indicate that crowdfunding scams are a new imminent threat to investors, little is known about them primarily due to the lack of measurement data collected from real scam cases. This paper fills the gap by collecting, labeling, and analyzing publicly available data of a hundred fraudulent campaigns on a crowdfunding platform. In order to find and understand distinguishing characteristics of crowdfunding scams, we propose to use a broad range of traits including project-based traits, project creator-based ones, and content-based ones such as linguistic cues and Named Entity Recognition features, etc. We then propose to use the feature selection method called Forward Stepwise Logistic Regression, through which 17 key discriminating features (including six original and hitherto unused ones) of scam campaigns are discovered. Based on the selected 17 key features, we present and discuss our findings and insights on distinguishing characteristics of crowdfunding scams, and build our scam detection model with 87.3% accuracy. We also explore the feasibility of early scam detection, building a model with 70.2% of classification accuracy right at the time of project launch. We discuss what features from which sections are more helpful for early scam detection on day 0 and thereafter.
@@ -354,7 +377,7 @@ order: 3
         <a href="/papers/Crowdfunding_Scams.pdf" class="publication-button paper-button">Paper</a>
         <a href="#" class="publication-button doi-button">DOI</a>
       </div>
-      <p class="publication-authors">Seung-hun Lee, and Hyun-chul Kim</p>
+      <p class="publication-authors">Seunghun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of The Korea Society of Computer and Information, Volume 23, Number 3, pp. 55-62, Mar. 2018.</p>
       <div class="publication-abstract">
         In this paper, we propose a model to detect crowdfunding scams, which have been reportedly occurring over the last several years, based on their project information and linguistic features. To this end, we first collect and analyze crowdfunding scam projects, and then reveal which specific project-related information and linguistic features are particularly useful in distinguishing scam projects from non-scams. Our proposed model built with the selected features and Random Forest machine learning algorithm can successfully detect scam campaigns with 84.46% accuracy.
@@ -376,7 +399,7 @@ order: 3
         <a href="/papers/Predicting_Success_of_Crowdfunding_Campaigns.pdf" class="publication-button paper-button">Paper</a>
         <a href="https://doi.org/10.9717/kmms.2018.21.2.281" class="publication-button doi-button">DOI</a>
       </div>
-      <p class="publication-authors">Kang-hee Lee, Seung-hun Lee, and Hyun-chul Kim</p>
+      <p class="publication-authors">Kang-hee Lee, Seunghun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of Korea Multimedia Society, Volume 21, Number 2, pp. 281-288, Feb. 2018.</p>
       <div class="publication-abstract">
         Crowdfunding has seen an enormous rise, becoming a new alternative funding source for emerging startup companies in recent years. Despite the huge success of crowdfunding, it has been reported that only around 40% of crowdfunding campaigns successfully raise the desired goal amount. The purpose of this study is to investigate key factors influencing successful fundraising on crowdfunding platforms. To this end, we mainly focus on contents of project campaigns, particularly their linguistic cues as well as multiple features extracted from project information and multimedia contents. We reveal which of these features are useful for predicting success of crowdfunding campaigns, and then build a predictive model based on those selected features. Our experimental results demonstrate that the built model predicts the success or failure of a crowdfunding campaign with 86.15% accuracy.
@@ -399,7 +422,7 @@ order: 3
         <a href="/papers/Predicting_Success_of_Crowdfunding_Campaigns.pdf" class="publication-button paper-button">Paper</a>
         <a href="https://doi.org/10.9717/kmms.2016.19.2.428" class="publication-button doi-button">DOI</a>
       </div>
-      <p class="publication-authors">Jangho Yoon, Seung-hun Lee, and Hyun-chul Kim</p>
+      <p class="publication-authors">Jangho Yoon, Seunghun Lee, and Hyun-chul Kim</p>
       <p class="publication-venue">Journal of Korea Multimedia Society, Volume 19, Number 2, pp. 428-435, Feb. 2016.</p>
       <div class="publication-abstract">
         Hundreds of millions of new posts and information are being uploaded and propagated everyday on Online Social Networks(OSN) like Twitter, Facebook, or Instagram. This paper proposes and implements a GPS-location based SNS data mapping, analysis, and visualization system, called Smart SNS Map, which collects SNS data from Twitter and Instagram using hundreds of PlanetLab nodes distributed across the globe. Like no other previous systems, our system uniquely supports a variety of functions, including GPS-location based mapping of collected tweets and Instagram photos, keyword-based tweet or photo searching, real-time heat-map visualization of tweets and instagram photos, sentiment analysis, word cloud visualization, etc. Overall, a system like this, admittedly still in a prototype phase though, is expected to serve a role as a sort of social weather station sooner or later, which will help people understand what are happening around the SNS users, systems, society, and how they feel about them, as well as how they change over time and/or space.
