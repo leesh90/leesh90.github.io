@@ -53,7 +53,7 @@ order: 1
 
 - [Explainable Prediction of Crowdfunding Success Using Hierarchical Attention Network][10]<br>
  Seunghun Lee, Muneeb A. Khan, and Hyun-chul Kim<br>
- Journal of MDPI Electronics, Volume 12, Number 3, pp. 570
+ Journal of MDPI Electronics, Volume 12, Number 3, pp. 570, Jan. 2026.
 
 - [Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods][9]<br>
  Seunghun Lee, Heemin Park, and Hyun-chul Kim<br>
