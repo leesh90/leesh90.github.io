@@ -5,12 +5,11 @@ order: 1
 ---
 
 
-**SeungHun Lee(이승훈)**<br>
-**[Network Data Science Lab](http://cosmos.smuc.ac.kr)**<br>
-**Dept. of Computer Science and Engineering**<br>
-**Sangmyung University**<br>
-**Office: C-building 404c**<br>
-**Email: mr.leesh90@gmail.com**<br>
+**SeungHun Lee (이승훈)**<br>
+**AI Engineer, [3billion](https://3billion.io)**<br>
+**Ph.D. Candidate (Expected Graduation: July 2026), [Network Data Science Lab](https://cosmos.smuc.ac.kr)**<br>
+**Dept. of Computer Software Engineering, Sangmyung University**<br>
+**Email: sh.lee@3billion.io / mr.leesh90@gmail.com**<br>
 
 <div class="cv-download mb-4 mt-3">
   <a href="/assets/files/Seunghun_CV.pdf" target="_blank" class="btn btn-outline-primary">
@@ -18,18 +17,24 @@ order: 1
   </a>
 </div>
 
+## Professional Experience
+
+- **AI Engineer**, [3billion](https://3billion.io), Seoul, South Korea (2026.3 ~ Present)
+  - Developing foundation models for DNA, RNA, and protein sequences.
+  - Applying deep learning architectures for large-scale biological sequence modeling.
+  - Building scalable training pipelines for large-scale genomic datasets.
+
+## Education
+
+- Ph.D., Dept. of Computer Software Engineering, Sangmyung University (2018.3 ~ 2026.7, Expected)
+- M.S., Dept. of Computer Software Engineering, Sangmyung University (2015.3 ~ 2017.2)
+- B.S., Dept. of Computer Software Engineering, Sangmyung University (2009.3 ~ 2015.2)
+
 ## Research Interests
 
-- Social Networking Service
-- Multi-modal Data Analysis
-- Crowdfunding Scam(Deception, Fraud) Detection, Success Prediction
-- Network Traffic Classification
-- Data Mining, Machine Learning, Deep Learning
-- Explainable AI
-- NLP (Natural Language Processing)
-- Large Language Models(LLMs)
-- Graph Neural Networks(GNNs)
-- Agent AI / Multi-Agent Systems
+My research focuses on AI-driven modeling of biological sequences, particularly in genomics and molecular biology. I develop foundation models to understand genomic function and predict the impact of genetic variants. I am particularly interested in large-scale sequence modeling and representation learning for DNA/RNA/protein data, along with explainable AI (XAI) techniques to improve model interpretability in high-stakes domains.
+
+**Previous research:** Network Traffic Classification, Crowdfunding Scam Detection, Multi-modal Data Analysis, Graph Neural Networks, NLP, and LLM applications.
 
 ## Publications
 ### Conferences
@@ -53,7 +58,7 @@ order: 1
 
 - [Explainable Prediction of Crowdfunding Success Using Hierarchical Attention Network][10]<br>
  Seunghun Lee, Muneeb A. Khan, and Hyun-chul Kim<br>
- Journal of MDPI Electronics, Volume 12, Number 3, pp. 570, Jan. 2026.
+ Journal of MDPI Electronics, Volume 15, Number 3, Jan. 2026.
 
 - [Fraud Detection on Crowdfunding Platforms using Multiple Feature Selection Methods][9]<br>
  Seunghun Lee, Heemin Park, and Hyun-chul Kim<br>
@@ -97,12 +102,6 @@ order: 1
 - Network Traffic Classification for Intrusion Detection <br>
  (sponsored by National Security Research Institute, Korea) 2015.06 ~ 2015.12
 
-
-## Education
-
-- Ph.D Dept. of Computer Software Engineering, Sangmyung (2018.3 ~)
-- M.S Dept. of Computer Software Engineering, Sangmyung. (2015.3 ~ 2017.2)
-- B.S Dept. of Computer Software Engineering, Sangmyung. (2009.3 ~ 2015.2)
 
 [1]: /papers/Content-based_Success_Prediction_of_Crowdfunding.pdf
 [2]: /papers/The_Language_of_Deceivers.pdf
