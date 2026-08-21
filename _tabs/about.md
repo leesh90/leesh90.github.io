@@ -7,7 +7,7 @@ order: 1
 
 **SeungHun Lee (이승훈)**<br>
 **AI Engineer, [3billion](https://3billion.io)**<br>
-**Ph.D. Candidate (Expected Graduation: July 2026), [Network Data Science Lab](https://cosmos.smuc.ac.kr)**<br>
+**Ph.D. (Aug 2026), [Network Data Science Lab](https://cosmos.smuc.ac.kr)**<br>
 **Dept. of Computer Software Engineering, Sangmyung University**<br>
 **Email: sh.lee@3billion.io / mr.leesh90@gmail.com**<br>
 
@@ -26,15 +26,17 @@ order: 1
 
 ## Education
 
-- Ph.D., Dept. of Computer Software Engineering, Sangmyung University (2018.3 ~ 2026.7, Expected)
+- Ph.D., Dept. of Computer Software Engineering, Sangmyung University (2018.3 ~ 2026.8)
 - M.S., Dept. of Computer Software Engineering, Sangmyung University (2015.3 ~ 2017.2)
 - B.S., Dept. of Computer Software Engineering, Sangmyung University (2009.3 ~ 2015.2)
 
-## Research Interests
+## Current Research Interests
 
 My research focuses on AI-driven modeling of biological sequences, particularly in genomics and molecular biology. I develop foundation models to understand genomic function and predict the impact of genetic variants. I am particularly interested in large-scale sequence modeling and representation learning for DNA/RNA/protein data, along with explainable AI (XAI) techniques to improve model interpretability in high-stakes domains.
 
-**Previous research:** Network Traffic Classification, Crowdfunding Scam Detection, Multi-modal Data Analysis, Graph Neural Networks, NLP, and LLM applications.
+## Doctoral Research
+
+My doctoral research spanned digital finance, network security, and Explainable AI (XAI). In digital finance, I employ a multimodal approach (i.e., text, video, and audio) and user behavior data to analyze crowdfunding platforms, detecting fraudulent campaigns and identifying success factors. For network traffic, I focus on traffic classification and intrusion detection, analyzing both traffic headers and payloads while developing methods to classify traffic patterns. Across these domains, I leverage advanced AI methodologies including natural language processing, pattern analysis, classical machine learning algorithms, transformers, graph neural networks (GNNs), large language models (LLMs), and Agent AI systems. Throughout my work, I integrate XAI techniques to enhance the reliability, transparency, and interpretability of AI-driven solutions.
 
 ## Publications
 ### Conferences
